@@ -48,7 +48,7 @@ export default StyleSheet.create({
     'borderRadius': '4px',
     'fontSize': [{ 'unit': 'px', 'value': 16 }],
     'backgroundColor': 'white',
-    'backgroundImage': 'url('searchicon.png')',
+    // background-image: url('searchicon.png');
     'backgroundPosition': '10px 10px',
     'backgroundRepeat': 'no-repeat',
     'padding': [{ 'unit': 'px', 'value': 12 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 12 }, { 'unit': 'px', 'value': 40 }],
