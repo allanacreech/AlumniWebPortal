@@ -13,7 +13,7 @@ var Gchild1 = React.createClass({
                 <div className="grandchild1">
                 <p>
                
-		  DISPLAY GCHILD 1
+		  My Profile Area
            
 			</p>
                 </div>

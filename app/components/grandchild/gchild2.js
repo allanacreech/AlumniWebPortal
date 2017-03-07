@@ -13,7 +13,7 @@ var Gchild2 = React.createClass({
                                     <p>
                                      
 
-                                        DISPLAY GCHILD2
+                                        Calendar
 			</p>
                                 </div>
                             </div>

@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+}
+
+.jumbotron {
+    padding: 0.5em 0.6em;
+    clear: both;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.btn {
+    padding: 0.5em;
+}
+
+.icon-bar {
+    width: 50%;
+    background-color: #555;
+    overflow: auto;
+    float: right;
+    clear: both;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 0 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active a:hover {
+    background-color: #4CAF50 !important;
+}
+
+
+/*Search box items*/
+
+input[type=text] {
+    padding: 10px;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}

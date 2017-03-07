@@ -12,7 +12,7 @@ var Gchild3 = React.createClass({
                 <div className="grandchild1">
                 <p>
                 
-		  DISPLAY GCHILD3
+		  News and Events
 			</p>
                 </div>
               </div>
