@@ -14,7 +14,8 @@ var Gchild1 = React.createClass({
                 <p>
                
 		  My Profile Area
-           
+                 <img src="http://placehold.it/350x150"></img>
+
 			</p>
                 </div>
               </div>

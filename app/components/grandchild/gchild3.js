@@ -13,6 +13,8 @@ var Gchild3 = React.createClass({
                 <p>
                 
 		  News and Events
+            <img src="http://placehold.it/350x150"></img>
+
 			</p>
                 </div>
               </div>

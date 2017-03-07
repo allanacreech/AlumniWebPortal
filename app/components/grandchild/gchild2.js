@@ -14,6 +14,8 @@ var Gchild2 = React.createClass({
                                      
 
                                         Calendar
+                                              <img src="http://placehold.it/350x150"></img>
+
 			</p>
                                 </div>
                             </div>

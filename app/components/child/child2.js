@@ -16,7 +16,7 @@ var Child2 = React.createClass({
 					</div>
 					<div className="panel-body">
 						Panel content
-                        sdgkhadsiulghadskjlg
+                      
 							</div>
 						</div>
 					</div>

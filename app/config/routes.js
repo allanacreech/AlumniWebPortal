@@ -56,7 +56,7 @@ module.exports = (
       <Route path="gchild3" component={Gchild3} />
 
       {/* If user selects any other path... we get the Info Route */}
-      <IndexRoute component={Store} />
+      <IndexRoute component={Main} />
 
     </Route>
   </Router>
