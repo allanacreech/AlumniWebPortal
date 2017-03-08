@@ -21,11 +21,20 @@ var Child1 = React.createClass({
               </div>
               <div className="panel-body">
                 <div className="grandchild1">
-                <p>
-		  <a href="#/gchild1"><button className="btn btn-default">My Profile</button></a>
-      <a href="#/gchild3"><button className="btn btn-default">Calendar</button></a>
+                
+                  <div className="row">
+                    <div className="col-lg-4">
+		                  <a href="#/gchild1"><button className="btn btn-default">My Profile</button></a>
+
+                      <a href="#/gchild3"><button className="btn btn-default">Calendar</button></a>
+                  </div>
+              </div>
+      
+      <div className="row">
       <a href="#/gchild3"><button className="btn btn-default">News and Events</button></a>
-    	</p>
+      
+      </div>
+    	
       {this.props.children}
                 </div>
               </div>
