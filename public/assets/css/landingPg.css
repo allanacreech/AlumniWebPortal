@@ -74,6 +74,11 @@ a img {
 		font-size: 14px;
 	}
 
+	.academicWebSolutionsLine {
+		font-size: 12px;
+		margin-top: -8px;
+		margin-left: 32px;
+	}
 
 
 	.formRow .col-md-4{

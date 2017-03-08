@@ -3,29 +3,31 @@
     <head>
 		<meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <title>Alumni Web Portal</title>
-		<link rel="shortcut icon" type="image/x-icon" href="./assets/images/Cap_Circle_Icon.png"/>
+        <title>AWP - Registration</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/images/Cap_Circle_Icon.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Animated Responsive Image Grid - Cycling through a set of images in a responsive grid." />
         <meta name="keywords" content="grid, images, thumbnails, responsive, css3, jquery, javascript, random, transition, 3d, perspective" />
         <meta name="author" content="Codrops" />
         <!--<link rel="shortcut icon" href="../favicon.ico"> -->
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="./assets/css/landingPg.css" />
 		<link rel="stylesheet" type="text/css" href="./assets/css/gridStyle.css" />
 		<script type="text/javascript" src="./assets/js/modernizr.custom.26633.js"></script>
 		<noscript>
-			<link rel="stylesheet" type="text/css" href="./assets/css/gridFallback.css" />
+			<link rel="stylesheet" type="text/css" href="./assets/css/fallback.css" />
 		</noscript>
 		<!--[if lt IE 9]>
 			<link rel="stylesheet" type="text/css" href="css/fallback.css" />
 		<![endif]-->
+        <link rel="stylesheet" type="text/css" href="./assets/css/registration.css" />
+
     </head>
 
 <body>
 
-<!--Background Image Grid-->
+<!--Side Image Grid-->
 <div class="container-fluid">
+    <div class="col-md-4">
 	<section class="main">
 		<div id="ri-grid" class="ri-grid ri-grid-size-3">
 			<img class="ri-loading-image" src="./assets/images/loading.gif"/>
@@ -87,53 +89,111 @@
 				</ul>
 			</div>
 	</section>
-</div>
+    </div>
+
 <!--End Background Image Grid-->
-				
-<!--Main Box-->
-<div class="container center-block">
 
-	<div class="row">
-			<!--Focal Image-->
-			<a class="focalImage" href="#"><img src="./assets/images/graduates3.jpg"></a>
-	</div>
+<div class="col-md-8">
+    <!--<div class="panel panel-default">
+        <div class="panel panel-body">-->
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Alumni Web Portal Registration</legend>
 
-	<!--<div class="container">-->
-	<div class="row formRow">
-		<div class="col-md-4">
-			<!-- University Logo -->
-			<a class="cityStateUniversityLogo" href="#"><img src="./assets/images/cityStateUniversityLogo.png"></a>
-			<h1 class="poweredByLine">Powered by Alumni Web Portal</h1>
-			<h1 class="academicWebSolutionsLine">Academic Web Solutions</h1>
+    <!--General Info-->
+    <h1>General Info</h1>
+        <!--Get Name-->
+        <div class="form-group">
+            <label for="inputFirstName" class="col-sm-2 control-label">First Name</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+                </div>
 
-		</div>
-		
-		<!--Login Portion-->
-		<div class="col-lg-8">
-			<form class="loginForm">
-				<fieldset>
-					<div class="form-group">
-						<input class="form-control" placeholder="E-mail" name="email" type="email" id="email-input" autofocus>
-					</div>
+                <label for="inputLastName" class="col-sm-2 control-label">Last Name</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+                </div>
+        </div>
 
-					<div class="form-group">
-						<input class="form-control" placeholder="Password" name="password" type="password" id="password-input" value="">
-					</div>
+        <!--Email Address-->
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+        </div>
 
-					<div class="checkbox">
-						<label>
-							<input name="remember" type="checkbox" value="Remember Me">Remember Me
-						</label>
-					</div>
-						
-					<button type="submit" class="btn btn-lg btn-success btn-block" >Login</button>
-				</fieldset>
-				<p>Or sign up <a href="./html/signup-page.html">here</a></p>
-			</form>
-		</div> 
-	</div>
+        <!--Password-->
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-3">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+
+            <label for="confirmPassword" class="col-sm-2 control-label">Confirm Password</label>
+                <div class="col-sm-3">
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                </div>
+        </div>
+
+    <!--Education-->
+    <h2>Education</h2>
+
+        <!--College & Graduation Year-->
+        <div class="form-group">
+            <!--<label for="inputSchool" class="col-sm-2 control-label">College</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="inputSchool" placeholder="College">
+                </div>-->
+
+                <label for="inputYearGraduated" class="col-sm-2 control-label">Year Graduated</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="inputYearGraduated" placeholder="Year Graduated">
+                </div>
+        </div>
+
+    <!--Degree-->
+    <div class="form-group">
+        <label for="major" class="col-lg-2 control-label">Major</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="major">
+                    <option>Select</option>
+                    <option>A.A. (Associate of Arts)</option>
+                    <option>A.S. (Associate of Science)</option>
+                    <option>A.A.S. (Associate of Applied Science)</option>
+                    <option>A.E. (Associate of Engineering)</option>
+                    <option>A.A.A. (Associate of Applied Arts)</option>
+                </select>
+            </div>
+    </div>
+
+    <!--Major-->
+    <div class="form-group">
+        <label for="degree" class="col-lg-2 control-label">Degree</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="degree">
+                    <option>Select</option>
+                    <option>A.A. (Associate of Arts)</option>
+                    <option>A.S. (Associate of Science)</option>
+                    <option>A.A.S. (Associate of Applied Science)</option>
+                    <option>A.E. (Associate of Engineering)</option>
+                    <option>A.A.A. (Associate of Applied Arts)</option>
+                </select>
+            </div>
+    </div>
+
+    <!--Cancel/Submit Buttons-->
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+        <!--</div>
+    </div>-->
 </div>
-			
 
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -143,32 +203,33 @@
 			
 		$( '#ri-grid' ).gridrotator( {
 			rows : 5,
-			columns : 8,
+			columns : 2,
 			maxStep : 2,
 			interval : 2000,
 			w1024 : {
 				rows : 5,
-				columns : 6
+				columns : 2
 			},
 			w768 : {
 				rows : 5,
-				columns : 5
+				columns : 2
 			},
 			w480 : {
 				rows : 6,
-				columns : 4
+				columns : 2
 			},
 			w320 : {
 				rows : 7,
-				columns : 4
+				columns : 2
 			},
 			w240 : {
-				rows : 7,
-				columns : 3
+				rows : 8,
+				columns : 2
 			},
 		} );
 			
 	});
 </script>
+
 </body>
 </html>
