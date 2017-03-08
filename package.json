@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "author": "Ahmed Haque",
+  "author": "Allana Creech",
   "license": "ISC",
   "dependencies": {
     "react": "^0.14.3",
