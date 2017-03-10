@@ -12,7 +12,7 @@ var Profile = React.createClass({
             <h2 style={{textAlign: 'center'}}>Michelle Obama</h2>
             <h3 style={{textAlign: 'center'}}>First Lady | Harvard Law School 1988 </h3>
             {/* Trigger the modal with a button */}
-            <button type="button" id="editIntroBtn" className="btn btn-info btn-circle " data-toggle="modal" data-target="#myModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
+            <button type="button" id="editIntroBtn" className="btn btn-default btn-circle " data-toggle="modal" data-target="#myModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
             {/* ::Edit Intro:: Modal */}
             <div id="myModal" className="modal fade" role="dialog">
               <div className="modal-dialog">
@@ -80,7 +80,7 @@ var Profile = React.createClass({
               <div className="card">
                 <div className="card-block">
                   {/* Trigger (Add Work) modal with a button */}
-                  <button type="button" id="addExperienceBtn" className="btn btn-info btn-circle " data-toggle="modal" data-target="#workModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
+                  <button type="button" id="addExperienceBtn" className="btn btn-default btn-circle " data-toggle="modal" data-target="#workModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
                   {/* ::Add (Work) Experience :: Modal */}
                   <div id="workModal" className="modal fade" role="dialog">
                     <div className="modal-dialog">
@@ -188,7 +188,7 @@ var Profile = React.createClass({
               <div className="card">
                 <div className="card-block">
                   {/* Trigger (Add Education) modal with a button */}
-                  <button type="button" id="addEducationBtn" className="btn btn-info btn-circle " data-toggle="modal" data-target="#educationModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
+                  <button type="button" id="addEducationBtn" className="btn btn-default btn-circle " data-toggle="modal" data-target="#educationModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
                   {/* ::Add (Education) College :: Modal */}
                   <div id="educationModal" className="modal fade" role="dialog">
                     <div className="modal-dialog">
@@ -280,7 +280,7 @@ var Profile = React.createClass({
               <div className="card">
                 <div className="card-block">
                   {/* Trigger (Add Organizations) modal with a button */}
-                  <button type="button" id="addOrganizationBtn" className="btn btn-info btn-circle " data-toggle="modal" data-target="#organizationsModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
+                  <button type="button" id="addOrganizationBtn" className="btn btn-default btn-circle " data-toggle="modal" data-target="#organizationsModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
                   {/* ::Add Organizations :: Modal */}
                   <div id="organizationsModal" className="modal fade" role="dialog">
                     <div className="modal-dialog">
