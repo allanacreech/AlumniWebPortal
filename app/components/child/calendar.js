@@ -1,7 +1,7 @@
 // Include React
 var React = require("react");
 
-var Child3 = React.createClass({
+var Calendar = React.createClass({
 
   // Here we render the component
   render: function() {
@@ -39,4 +39,4 @@ Whatever
     );
   }
 });
-module.exports = Child3;
+module.exports = Calendar;
