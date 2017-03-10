@@ -4,20 +4,32 @@
   "main": "public/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --use_strict index.js",
     "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allanacreech/AlumniWebPortal"
   },
   "author": "Allana Creech",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-router": "^2.4.1"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "material-ui": "^0.17.0",
+    "nodemon": "^1.11.0",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-router": "^2.8.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "validator": "^7.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.13",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "nodemon": "^1.11.0",
     "webpack": "^1.13.1"
   },
   "description": ""
