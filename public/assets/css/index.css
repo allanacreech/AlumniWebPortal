@@ -67,3 +67,7 @@ input[type=text] {
 input[type=text]:focus {
     width: 100%;
 }
+
+.focalImage { 
+   border: 4px solid #000000;
+}
