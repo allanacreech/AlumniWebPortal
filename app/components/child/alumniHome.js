@@ -1,7 +1,7 @@
 // Include React
 var React = require("react");
 
-var Child1 = React.createClass({
+var AlumniHome = React.createClass({
 
   // Here we render the component
   render: function() {
@@ -48,4 +48,4 @@ var Child1 = React.createClass({
     );
   }
 });
-module.exports = Child1;
+module.exports = AlumniHome;

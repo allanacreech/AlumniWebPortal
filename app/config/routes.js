@@ -23,9 +23,9 @@ var Main = require("../components/Main");
 // var Info = require("../components/Info");
 // var Chat = require("../components/Chat");
 
-var Child1 = require("../components/child/child1")
-var Child2 = require("../components/child/child2")
-var Child3 = require("../components/child/child3")
+var AlumniHome = require("../components/child/alumniHome")
+var Profile = require("../components/child/profile")
+var Calendar = require("../components/child/calendar")
 
 var Store = require("../components/store/store")
 
@@ -44,19 +44,19 @@ module.exports = (
 
       {/* If user selects Info or Chat show the appropriate component */}
 
-      <Route path="child1" component={Child1} />
-      <Route path="child2" component={Child2} />
-      <Route path="child3" component={Child3} />
+      <Route path="alumniHome" component={AlumniHome} />
+      <Route path="profile" component={Profile} />
+      <Route path="calendar" component={Calendar} />
 
 
       <Route path="store" component={Store} />
 
-      <Route path="gchild1" component={Gchild1} />
-      <Route path="gchild2" component={Gchild2} />
-      <Route path="gchild3" component={Gchild3} />
+      <Route path="galumniHome" component={Gchild1} />
+      <Route path="gprofile" component={Gchild2} />
+      <Route path="gcalendar" component={Gchild3} />
 
       {/* If user selects any other path... we get the Info Route */}
-      <IndexRoute component={Child1} />
+      <IndexRoute component={AlumniHome} />
 
     </Route>
   </Router>
