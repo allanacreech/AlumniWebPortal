@@ -1,65 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* General Demo Style */
 body {
-    margin: 0;
+	font-family: 'Lato', 'Myriad Pro','Trebuchet MS', sans-serif;
+	background: #f9f9f9 url(../images/bg.jpg) repeat top left;
+	font-weight: 300;
+	font-size: 14px;
+	color: #333;
+	overflow: scroll;
+	overflow-x: hidden;
 }
 
-.jumbotron {
-    padding: 0.5em 0.6em;
-    clear: both;
+a {
+	color: #555;
+	text-decoration: none;
 }
 
-h1 {
-    font-size: 2em;
+a img {
+	border: none;
 }
 
-p {
-    font-size: 1.2em;
-}
-
-.btn {
-    padding: 0.5em;
-}
-
-.icon-bar {
-    width: 50%;
-    background-color: #555;
-    overflow: auto;
-    float: right;
-    clear: both;
-}
-
-.icon-bar a {
-    float: left;
-    width: 20%;
-    text-align: center;
-    padding: 0 0;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-}
-
-.icon-bar a:hover {
-    background-color: #000;
-}
-
-.active a:hover {
-    background-color: #4CAF50 !important;
+.container {
+	position: relative;
+	background: transparent url(../images/light.png) fixed no-repeat center top;
 }
 
 
-/*Search box items*/
-
-input[type=text] {
-    padding: 10px;
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    /*background-image: url('searchicon.png');*/
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+/*Center Box*/
+.center-block {
+	background-color: #fff;
+	border-radius: 8px;
+	height: 550px;
+	margin-left: -400px;
+	margin-top: -266px;
+	width: 800px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	box-shadow: 10px 10px 30px 5px #595959;
+	z-index: 1;
 }
+	/*Main Image*/
+	.focalImage {
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		vertical-align: top;
+		overflow: hidden;
+		border-radius: 8px 8px 0px 0px;
+	}
+
+	/*Login Section*/
+	.formRow{
+		margin-top: 30px;
+		margin-left: 10px;
+	}
+	
+	.cityStateUniversityLogo {
+		margin-left: 25px;
+	}
+
+	.poweredByLine {
+		font-size: 14px;
+	}
+
+	.academicWebSolutionsLine {
+		font-size: 12px;
+		margin-top: -8px;
+		margin-left: 32px;
+	}
+
+
+	.formRow .col-md-4{
+		float: left;
+	}
+
+	.container-fluid{
+		padding: 0px !important;
+	}
+
+	.col-lg-8 {
+		margin-left: -20px;
+	}
+
+	.loginForm p{
+		float: right;
+    	margin-right: 210px;
+	}

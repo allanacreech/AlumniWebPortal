@@ -1,7 +1,7 @@
 // Include React
 var React = require("react");
 
-var Child2 = React.createClass({
+var Profile = React.createClass({
 
 
   render: function() {
@@ -329,4 +329,4 @@ var Child2 = React.createClass({
 });
 
     
-module.exports = Child2;
+module.exports = Profile;
