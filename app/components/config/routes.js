@@ -51,9 +51,9 @@ module.exports = (
 
       <Route path="store" component={Store} />
 
-      <Route path="galumniHome" component={Gchild1} />
-      <Route path="gprofile" component={Gchild2} />
-      <Route path="gcalendar" component={Gchild3} />
+      <Route path="gchild1" component={Gchild1} />
+      <Route path="gchild2" component={Gchild2} />
+      <Route path="gchild3" component={Gchild3} />
 
       {/* If user selects any other path... we get the Info Route */}
       <IndexRoute component={AlumniHome} />
