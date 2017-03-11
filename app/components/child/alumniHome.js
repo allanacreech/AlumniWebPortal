@@ -9,10 +9,10 @@ var AlumniHome = React.createClass({
 
       <div>
         {/* Navigation */}
-        <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div className="container">
+        {/*<nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">*/}
+          {/*<div className="container">*/}
             {/* Brand and toggle get grouped for better mobile display */}
-            <div className="navbar-header">
+            {/*<div className="navbar-header">
               <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span className="sr-only">Toggle navigation</span>
                 <span className="icon-bar" />
@@ -20,9 +20,9 @@ var AlumniHome = React.createClass({
                 <span className="icon-bar" />
               </button>
               <a className="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
+            </div>*/}
             {/* Collect the nav links, forms, and other content for toggling */}
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            {/*<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
                 <li>
                   <a href="#">About</a>
@@ -33,12 +33,12 @@ var AlumniHome = React.createClass({
                 <li>
                   <a href="#">Contact</a>
                 </li>
-              </ul>
-            </div>
+              </ul>*/}
+            {/*</div>*/}
             {/* /.navbar-collapse */}
-          </div>
+          {/*</div>*/}
           {/* /.container */}
-        </nav>
+        {/*</nav>*/}
         {/* Page Content */}
         <div className="container">
           <div className="row">
@@ -53,7 +53,7 @@ var AlumniHome = React.createClass({
                 <a href="#">Blog Post Title</a>
               </h2>
               <p className="lead">
-                by <a href="index.php">Start Bootstrap</a>
+                by <a href="#">Start Bootstrap</a>
               </p>
               <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:00 PM</p>
               <hr />
@@ -67,7 +67,7 @@ var AlumniHome = React.createClass({
                 <a href="#">Blog Post Title</a>
               </h2>
               <p className="lead">
-                by <a href="index.php">Start Bootstrap</a>
+                by <a href="#">Start Bootstrap</a>
               </p>
               <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:45 PM</p>
               <hr />
@@ -81,7 +81,7 @@ var AlumniHome = React.createClass({
                 <a href="#">Blog Post Title</a>
               </h2>
               <p className="lead">
-                by <a href="index.php">Start Bootstrap</a>
+                by <a href="#">Start Bootstrap</a>
               </p>
               <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:45 PM</p>
               <hr />
