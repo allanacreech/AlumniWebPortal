@@ -23,17 +23,16 @@ var Main = require("../components/Main");
 // var Info = require("../components/Info");
 // var Chat = require("../components/Chat");
 
-var AlumniHome = require("../components/child/alumniHome")
+var AlumniHome = require( "../components/child/alumniHome");
 var Profile = require("../components/child/profile")
 var Calendar = require("../components/child/calendar")
 
 var Store = require("../components/store/store")
 
-var Gchild1 = require("../components/grandchild/gchild1")
-var Gchild2 = require("../components/grandchild/gchild2")
+// var Gchild1 = require("../components/grandchild/gchild1")
+// var Gchild2 = require("../components/grandchild/gchild2")
 
-var Gchild3 = require("../components/grandchild/gchild3")
-
+// var Gchild3 = require("../components/grandchild/gchild3")
 
 // Export the Routes
 module.exports = (
@@ -51,9 +50,9 @@ module.exports = (
 
       <Route path="store" component={Store} />
 
-      <Route path="gchild1" component={Gchild1} />
+     {/*} <Route path="gchild1" component={Gchild1} />
       <Route path="gchild2" component={Gchild2} />
-      <Route path="gchild3" component={Gchild3} />
+      <Route path="gchild3" component={Gchild3} />*/}
 
       {/* If user selects any other path... we get the Info Route */}
       <IndexRoute component={AlumniHome} />

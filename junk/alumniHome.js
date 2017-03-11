@@ -1,7 +1,7 @@
 // Include React
-var React = require("react");
-var BlogList = require("../blogs/BlogList");
-var AlumniWebPortalData = require( '../shared/data');
+import React from "react";
+import BlogList from "../blogs/BlogList";
+import AlumniWebPortalData from '../shared/data';
 
 var blogs = [
     {"author":"All-Brand Supplies Dist.", "body":"It's cold in Seattle."},
@@ -9,21 +9,20 @@ var blogs = [
     {"author":"American Foods Llc", "body":"Who cares?"}
 ];
 
-var AlumniHome = React.createClass({
-    getInitialState: function(){
+export class AlumniHome extends React.Component{
+    constructor(){
+        super();
+        this.state = {blogs: []};
+    }
+    componentDidMount() {
+        //let api = new AlumniWebPortalData();
+        let self = this;
         // api.getBlogs().then(data => {
         //     self.setState({blogs: data.data});
-        return {blogs: blogs};
-    },
-    // componentDidMount: function() {
-    //     //let api = new AlumniWebPortalData();
-    //     let self = this;
-    //     // api.getBlogs().then(data => {
-    //     //     self.setState({blogs: data.data});
-    //     // });
-    //     self.setState({blogs: blogs});
-    // },
-  render: function() {
+        // });
+        self.setState({blogs: blogs});
+    }
+  render() {
     return (
       <div>
          {/* Page Content */}
@@ -122,7 +121,5 @@ var AlumniHome = React.createClass({
       </div>
     );
   }
-});
-
-module.exports = AlumniHome;
+}  	
       
