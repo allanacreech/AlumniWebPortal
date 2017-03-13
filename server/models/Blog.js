@@ -31,6 +31,7 @@ BlogSchema.statics = {
         }
         return this.find()
             .limit(limit)
+            .sort({date: -1})
             .exec();
     },
     getByAuthor(author){

@@ -1,34 +1,57 @@
 // Include React
 var React = require("react");
 var BlogList = require("../blogs/BlogList");
-var AlumniWebPortalData = require( '../shared/data');
+var BlogForm = require("../blogs/BlogForm");
+var AlumniWebPortalData = require( '../shared/AlumniDataRouter');
 
-var blogs = [
-    {"author":"All-Brand Supplies Dist.", "body":"It's cold in Seattle."},
-    {"author":"Alliance Foods Ltd/Global", "body":"It's warm in Florida."},
-    {"author":"American Foods Llc", "body":"Who cares?"}
-];
+// var blogs = [
+//     {"author":"All-Brand Supplies Dist.", "body":"It's cold in Seattle."},
+//     {"author":"Alliance Foods Ltd/Global", "body":"It's warm in Florida."},
+//     {"author":"American Foods Llc", "body":"Who cares?"}
+// ];
 
 var AlumniHome = React.createClass({
     getInitialState: function(){
-        // api.getBlogs().then(data => {
-        //     self.setState({blogs: data.data});
-        return {blogs: blogs};
+        return {blogs: [], searchId: "", action: "list"};
+        // this.addBlog = this.addBlog.bind(this);
     },
-    // componentDidMount: function() {
-    //     //let api = new AlumniWebPortalData();
-    //     let self = this;
-    //     // api.getBlogs().then(data => {
-    //     //     self.setState({blogs: data.data});
-    //     // });
-    //     self.setState({blogs: blogs});
-    // },
+    componentDidMount: function() {
+     this.getInfo();
+     },
+    getInfo: function() {
+      var self = this;
+        AlumniWebPortalData.getBlogs().then(data => {
+          console.log(data.data);
+            self.setState({blogs: data.data});
+        });
+    },
+    componentDidUpdate: function(prevProps, prevState){
+
+    },
+  handleBlogSubmit: function(blog) {
+    // let blogs = this.state.blogs;
+    // let newBlogs = blogs.concat([blog]);
+    // this.setState({ blogs: newBlogs });
+    // axios.post(this.props.url, comment)
+    //   .catch(err => {
+    //     console.error(err);
+    //     this.setState({ data: comments });
+    //   });
+    this.addBlog(blog);
+  },
+    addBlog: function(blog){
+      var self = this;
+      AlumniWebPortalData.createBlog(blog).then(data => {
+          console.log(data.data);
+            self.getInfo();
+        });
+    },
   render: function() {
     return (
       <div>
-<<<<<<< HEAD
+
          {/* Page Content */}
-=======
+
         {/* Navigation */}
         {/*<nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">*/}
           {/*<div className="container">*/}
@@ -61,7 +84,7 @@ var AlumniHome = React.createClass({
           {/* /.container */}
         {/*</nav>*/}
         {/* Page Content */}
->>>>>>> 7f21dc459f296e0f009b520ce2736f1f588c9c64
+
         <div className="container">
           <div className="row">
             {/* Blog Entries Column */}
@@ -70,55 +93,12 @@ var AlumniHome = React.createClass({
                 Page Heading
                 <small>Secondary Text</small>
               </h1>
-<<<<<<< HEAD
-
+              <div>
+                <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
+              </div>
               {/*Blog Posts */}
               <BlogList blogs={this.state.blogs} />
 
-=======
-              {/* First Blog Post */}
-              <h2>
-                <a href="#">Blog Post Title</a>
-              </h2>
-              <p className="lead">
-                by <a href="#">Start Bootstrap</a>
-              </p>
-              <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:00 PM</p>
-              <hr />
-              <img className="img-responsive" src="http://placehold.it/900x300" alt />
-              <hr />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-              <a className="btn btn-primary" href="#">Read More <span className="glyphicon glyphicon-chevron-right" /></a>
-              <hr />
-              {/* Second Blog Post */}
-              <h2>
-                <a href="#">Blog Post Title</a>
-              </h2>
-              <p className="lead">
-                by <a href="#">Start Bootstrap</a>
-              </p>
-              <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:45 PM</p>
-              <hr />
-              <img className="img-responsive" src="http://placehold.it/900x300" alt />
-              <hr />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
-              <a className="btn btn-primary" href="#">Read More <span className="glyphicon glyphicon-chevron-right" /></a>
-              <hr />
-              {/* Third Blog Post */}
-              <h2>
-                <a href="#">Blog Post Title</a>
-              </h2>
-              <p className="lead">
-                by <a href="#">Start Bootstrap</a>
-              </p>
-              <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:45 PM</p>
-              <hr />
-              <img className="img-responsive" src="http://placehold.it/900x300" alt />
-              <hr />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
-              <a className="btn btn-primary" href="#">Read More <span className="glyphicon glyphicon-chevron-right" /></a>
-              <hr />
->>>>>>> 7f21dc459f296e0f009b520ce2736f1f588c9c64
               {/* Pager */}
               <ul className="pager">
                 <li className="previous">

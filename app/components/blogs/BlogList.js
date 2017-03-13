@@ -7,7 +7,7 @@ var BlogList = React.createClass({
         return (
         <div>
             {this.props.blogs.map(blog => {
-                return <BlogItem blog={blog}/>;
+                return <BlogItem key={blog._id} blog={blog}/>;
             })}
         </div>
         );
