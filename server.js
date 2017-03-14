@@ -33,11 +33,19 @@ db.on("error", function(err) {
     console.log("Mongoose Error: ", err);
 });
 
+<<<<<<< HEAD
 // db.once("open", function() {
 //     var seeder = DatabaseSeeder;
 //     seeder.runSeed();
 //     console.log("Mongoose connection successful.");
 // });
+=======
+db.once("open", function() {
+    var seeder = DatabaseSeeder;
+    seeder.runSeed();
+    console.log("Mongoose connection successful.");
+});
+>>>>>>> a1760c3cd218575119d3dbecd6430cbf97a2e687
 
 // -------------------------------------------------
 

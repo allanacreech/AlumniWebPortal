@@ -48,4 +48,8 @@ var BlogForm = React.createClass( {
   }
 });
 
+<<<<<<< HEAD
 module.exports =  BlogForm;
+=======
+module.exports =  BlogForm;
+>>>>>>> a1760c3cd218575119d3dbecd6430cbf97a2e687

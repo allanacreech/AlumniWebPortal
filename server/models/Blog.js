@@ -42,4 +42,8 @@ BlogSchema.statics = {
     }
 };
 
+<<<<<<< HEAD
 module.exports = mongoose.model("Blog", BlogSchema);
+=======
+module.exports = mongoose.model("Blog", BlogSchema);
+>>>>>>> a1760c3cd218575119d3dbecd6430cbf97a2e687

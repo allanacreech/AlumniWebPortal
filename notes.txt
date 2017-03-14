@@ -1,3 +1,7 @@
 In package.json:
   // "main": "public/index.html",
+<<<<<<< HEAD
   "main": "index.js",
+=======
+  "main": "index.js",
+>>>>>>> a1760c3cd218575119d3dbecd6430cbf97a2e687
