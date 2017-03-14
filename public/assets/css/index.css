@@ -69,7 +69,7 @@ a img {
 	.cityStateUniversityLogo {
 		margin-left: 25px;
 	}
-<<<<<<< HEAD
+
 
 	.poweredByLine {
 		font-size: 14px;
@@ -81,7 +81,7 @@ a img {
 		margin-left: 32px;
 	}
 
-<<<<<<< HEAD
+
 
 	.formRow .col-md-4{
 		float: left;
@@ -99,7 +99,7 @@ a img {
 		float: right;
     	margin-right: 210px;
 	}
-=======
+
 input[type=text] {
     padding: 10px;
     width: 130px;
@@ -115,8 +115,7 @@ input[type=text] {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
->>>>>>> 01cc3dd433e777037b4b1d0dce7690db25e5a2c3
-=======
+
 
 	.poweredByLine {
 		font-size: 14px;
@@ -145,4 +144,3 @@ input[type=text] {
 		float: right;
     	margin-right: 210px;
 	}
->>>>>>> b4e6c36306577e2e91e8964e55a8d18c98d76f39

@@ -1,90 +1,31 @@
 // Include React
-var React = require("react");
-var BlogList = require("../blogs/BlogList");
-var BlogForm = require("../blogs/BlogForm");
-var AlumniWebPortalData = require( '../shared/AlumniDataRouter');
+import React from "react";
+import BlogList from "../blogs/BlogList";
+import AlumniWebPortalData from '../shared/data';
 
-// var blogs = [
-//     {"author":"All-Brand Supplies Dist.", "body":"It's cold in Seattle."},
-//     {"author":"Alliance Foods Ltd/Global", "body":"It's warm in Florida."},
-//     {"author":"American Foods Llc", "body":"Who cares?"}
-// ];
+var blogs = [
+    {"author":"All-Brand Supplies Dist.", "body":"It's cold in Seattle."},
+    {"author":"Alliance Foods Ltd/Global", "body":"It's warm in Florida."},
+    {"author":"American Foods Llc", "body":"Who cares?"}
+];
 
-var AlumniHome = React.createClass({
-    getInitialState: function(){
-        return {blogs: [], searchId: "", action: "list"};
-        // this.addBlog = this.addBlog.bind(this);
-    },
-    componentDidMount: function() {
-     this.getInfo();
-     },
-    getInfo: function() {
-      var self = this;
-        AlumniWebPortalData.getBlogs().then(data => {
-          console.log(data.data);
-            self.setState({blogs: data.data});
-        });
-    },
-    componentDidUpdate: function(prevProps, prevState){
-
-    },
-  handleBlogSubmit: function(blog) {
-    // let blogs = this.state.blogs;
-    // let newBlogs = blogs.concat([blog]);
-    // this.setState({ blogs: newBlogs });
-    // axios.post(this.props.url, comment)
-    //   .catch(err => {
-    //     console.error(err);
-    //     this.setState({ data: comments });
-    //   });
-    this.addBlog(blog);
-  },
-    addBlog: function(blog){
-      var self = this;
-      AlumniWebPortalData.createBlog(blog).then(data => {
-          console.log(data.data);
-            self.getInfo();
-        });
-    },
-  render: function() {
+export class AlumniHome extends React.Component{
+    constructor(){
+        super();
+        this.state = {blogs: []};
+    }
+    componentDidMount() {
+        //let api = new AlumniWebPortalData();
+        let self = this;
+        // api.getBlogs().then(data => {
+        //     self.setState({blogs: data.data});
+        // });
+        self.setState({blogs: blogs});
+    }
+  render() {
     return (
       <div>
-
          {/* Page Content */}
-
-        {/* Navigation */}
-        {/*<nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">*/}
-          {/*<div className="container">*/}
-            {/* Brand and toggle get grouped for better mobile display */}
-            {/*<div className="navbar-header">
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-              </button>
-              <a className="navbar-brand" href="#">Start Bootstrap</a>
-            </div>*/}
-            {/* Collect the nav links, forms, and other content for toggling */}
-            {/*<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav">
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Services</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>*/}
-            {/*</div>*/}
-            {/* /.navbar-collapse */}
-          {/*</div>*/}
-          {/* /.container */}
-        {/*</nav>*/}
-        {/* Page Content */}
-
         <div className="container">
           <div className="row">
             {/* Blog Entries Column */}
@@ -93,9 +34,7 @@ var AlumniHome = React.createClass({
                 Page Heading
                 <small>Secondary Text</small>
               </h1>
-              <div>
-                <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
-              </div>
+
               {/*Blog Posts */}
               <BlogList blogs={this.state.blogs} />
 
@@ -182,7 +121,5 @@ var AlumniHome = React.createClass({
       </div>
     );
   }
-});
-
-module.exports = AlumniHome;
+}  	
       

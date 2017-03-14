@@ -1,62 +1,18 @@
 // Include React
 var React = require("react");
-var BlogList = require("../blogs/BlogList");
-var BlogForm = require("../blogs/BlogForm");
-var AlumniWebPortalData = require( '../shared/AlumniDataRouter');
-
-// var blogs = [
-//     {"author":"All-Brand Supplies Dist.", "body":"It's cold in Seattle."},
-//     {"author":"Alliance Foods Ltd/Global", "body":"It's warm in Florida."},
-//     {"author":"American Foods Llc", "body":"Who cares?"}
-// ];
 
 var AlumniHome = React.createClass({
-    getInitialState: function(){
-        return {blogs: [], searchId: "", action: "list"};
-        // this.addBlog = this.addBlog.bind(this);
-    },
-    componentDidMount: function() {
-     this.getInfo();
-     },
-    getInfo: function() {
-      var self = this;
-        AlumniWebPortalData.getBlogs().then(data => {
-          console.log(data.data);
-            self.setState({blogs: data.data});
-        });
-    },
-    componentDidUpdate: function(prevProps, prevState){
 
-    },
-  handleBlogSubmit: function(blog) {
-    // let blogs = this.state.blogs;
-    // let newBlogs = blogs.concat([blog]);
-    // this.setState({ blogs: newBlogs });
-    // axios.post(this.props.url, comment)
-    //   .catch(err => {
-    //     console.error(err);
-    //     this.setState({ data: comments });
-    //   });
-    this.addBlog(blog);
-  },
-    addBlog: function(blog){
-      var self = this;
-      AlumniWebPortalData.createBlog(blog).then(data => {
-          console.log(data.data);
-            self.getInfo();
-        });
-    },
+ 
   render: function() {
     return (
+
       <div>
-
-         {/* Page Content */}
-
         {/* Navigation */}
-        {/*<nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">*/}
-          {/*<div className="container">*/}
+        <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div className="container">
             {/* Brand and toggle get grouped for better mobile display */}
-            {/*<div className="navbar-header">
+            <div className="navbar-header">
               <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span className="sr-only">Toggle navigation</span>
                 <span className="icon-bar" />
@@ -64,9 +20,9 @@ var AlumniHome = React.createClass({
                 <span className="icon-bar" />
               </button>
               <a className="navbar-brand" href="#">Start Bootstrap</a>
-            </div>*/}
+            </div>
             {/* Collect the nav links, forms, and other content for toggling */}
-            {/*<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
                 <li>
                   <a href="#">About</a>
@@ -77,14 +33,13 @@ var AlumniHome = React.createClass({
                 <li>
                   <a href="#">Contact</a>
                 </li>
-              </ul>*/}
-            {/*</div>*/}
+              </ul>
+            </div>
             {/* /.navbar-collapse */}
-          {/*</div>*/}
+          </div>
           {/* /.container */}
-        {/*</nav>*/}
+        </nav>
         {/* Page Content */}
-
         <div className="container">
           <div className="row">
             {/* Blog Entries Column */}
@@ -93,12 +48,48 @@ var AlumniHome = React.createClass({
                 Page Heading
                 <small>Secondary Text</small>
               </h1>
-              <div>
-                <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
-              </div>
-              {/*Blog Posts */}
-              <BlogList blogs={this.state.blogs} />
-
+              {/* First Blog Post */}
+              <h2>
+                <a href="#">Blog Post Title</a>
+              </h2>
+              <p className="lead">
+                by <a href="index.php">Start Bootstrap</a>
+              </p>
+              <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:00 PM</p>
+              <hr />
+              <img className="img-responsive" src="http://placehold.it/900x300" alt />
+              <hr />
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
+              <a className="btn btn-primary" href="#">Read More <span className="glyphicon glyphicon-chevron-right" /></a>
+              <hr />
+              {/* Second Blog Post */}
+              <h2>
+                <a href="#">Blog Post Title</a>
+              </h2>
+              <p className="lead">
+                by <a href="index.php">Start Bootstrap</a>
+              </p>
+              <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:45 PM</p>
+              <hr />
+              <img className="img-responsive" src="http://placehold.it/900x300" alt />
+              <hr />
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
+              <a className="btn btn-primary" href="#">Read More <span className="glyphicon glyphicon-chevron-right" /></a>
+              <hr />
+              {/* Third Blog Post */}
+              <h2>
+                <a href="#">Blog Post Title</a>
+              </h2>
+              <p className="lead">
+                by <a href="index.php">Start Bootstrap</a>
+              </p>
+              <p><span className="glyphicon glyphicon-time" /> Posted on August 28, 2013 at 10:45 PM</p>
+              <hr />
+              <img className="img-responsive" src="http://placehold.it/900x300" alt />
+              <hr />
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
+              <a className="btn btn-primary" href="#">Read More <span className="glyphicon glyphicon-chevron-right" /></a>
+              <hr />
               {/* Pager */}
               <ul className="pager">
                 <li className="previous">
@@ -182,7 +173,8 @@ var AlumniHome = React.createClass({
       </div>
     );
   }
-});
+});   	
+      
+
 
 module.exports = AlumniHome;
-      
