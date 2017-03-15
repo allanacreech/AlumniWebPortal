@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var React = require('react');
 
 var BlogForm = React.createClass( {
@@ -50,7 +49,7 @@ var BlogForm = React.createClass( {
 });
 
 module.exports =  BlogForm;
-=======
+
 var React = require( "react");
 
 var BlogItem = require("./BlogItem");
@@ -68,4 +67,4 @@ var BlogList = React.createClass({
 });
 
 module.exports = BlogList;
->>>>>>> a1760c3cd218575119d3dbecd6430cbf97a2e687
+

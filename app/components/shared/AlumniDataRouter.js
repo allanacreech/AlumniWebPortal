@@ -8,10 +8,7 @@ var AlumniWebPortalData = {
         return axios.post("/api/blogs/create", blog);
     }
 
-<<<<<<< HEAD
-};
-=======
 };
 
 module.exports = AlumniWebPortalData;
->>>>>>> a1760c3cd218575119d3dbecd6430cbf97a2e687
+
