@@ -48,22 +48,105 @@ p {
 
 /*Search box items*/
 
-input[type=text] {
-    padding: 10px;
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    /*background-image: url('searchicon.png');*/
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-<<<<<<< HEAD
+
+/*DO NOT USE...Would Impact Profile Page. If Needed For Blog, Add ID/Class Name*/
+        /*input[type=text] {
+            padding: 10px;
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;*/
+            /*background-image: url('searchicon.png');*/
+            /*background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }*/
+
+
+/* USER PROFILE BOX */
+
+.profile-well {
+    padding: 0px;
 }
-=======
+
+.user-image {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    margin-top: -50px;
+    border: 2px solid #021a40;
 }
->>>>>>> b4e6c36306577e2e91e8964e55a8d18c98d76f39
+
+.profile-background {
+    background-image: url('/assets/images/ProfileBkg.jpg');
+    background-size: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 3px 3px 0px 0px;
+}
+
+
+/* RESPONSIVE COLUMNS_Profile/Blog/Calendar Page */
+        /*  SECTIONS  */
+        .section {
+            clear: both;
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+        }
+
+        /*  COLUMN SETUP  */
+        .col {
+            display: block;
+            float:left;
+            margin: 1% 0 1% 1.5%;
+        }
+        .col:first-child { margin-left: 0; }
+
+        /*  GROUPING  */
+        .group:before,
+        .group:after { content:""; display:table; }
+        .group:after { clear:both;}
+        .group { zoom:1; /* For IE 6/7 */ }
+        /*  GRID OF EIGHT  */
+        .span_8_of_8 {
+            width: 100%;
+        }
+
+        .span_7_of_8 {
+            width: 87.31%;
+        }
+
+        .span_6_of_8 {
+            width: 74.62%;
+        }
+
+        .span_5_of_8 {
+            width: 61.93%;
+        }
+
+        .span_4_of_8 {
+            width: 49.25%;
+        }
+
+        .span_3_of_8 {
+            width: 36.56%;
+        }
+
+        .span_2_of_8 {
+            width: 23.87%;
+        }
+
+        .span_1_of_8 {
+            width: 11.18%;
+        }
+
+        /*  GO FULL WIDTH BELOW 480 PIXELS */
+        @media only screen and (max-width: 480px) {
+            .col {  margin: 1% 0 1% 0%; }
+            .span_1_of_8, .span_2_of_8, .span_3_of_8, .span_4_of_8, .span_5_of_8, .span_6_of_8, .span_7_of_8, .span_8_of_8 { width: 100%; }
+        }
