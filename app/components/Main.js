@@ -1,6 +1,9 @@
 // Include React
 var React = require("react");
 
+// Include React
+var React = require("react");
+
 var Main = React.createClass({
 
   // Here we render the component
