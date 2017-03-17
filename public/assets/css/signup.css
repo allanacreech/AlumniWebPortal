@@ -1,0 +1,58 @@
+/*background image*/
+body {
+	background-image: url('/assets/images/SchoolBuilding.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*Registration Box*/
+.registration-block {
+	background-color: #fff;
+	border-radius: 8px;
+	height: 550px;
+	margin-left: -400px;
+	margin-top: -266px;
+	width: 800px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	box-shadow: 10px 10px 30px 5px #595959;
+	z-index: 1;
+}
+
+.row {
+	padding-left: 0;
+}
+
+.image-grid-col {
+	margin-left: 0;
+	padding-top: 0;
+	padding-left: 0;
+}
+
+.form-group {
+	padding-right: 15px;
+	padding-left: 20px;
+}
+
+/*For Side Grid Images*/
+.container-fluid {
+    margin-left: -45px;
+	margin-top: -15px;
+}
+
+.ri-grid ul {
+	list-style: none;
+	display: block;
+	width: 100%;
+	margin: 22px;
+	padding: 0;
+	opacity: 1;
+	/*background: rgba(25, 25, 25, .7)*/
+	-webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+}
