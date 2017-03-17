@@ -5,7 +5,6 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 
 var DatabaseSeeder = require("./server/seed-data/seed");
-var routes = require("./server/controllers");
 
 // Create Instance of Express
 var app = express();
@@ -20,6 +19,19 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("./public"));
+
+// Requiring passport as we've configured it
+var passport = require("./server/config/passport");
+// We need to use sessions to keep track of our user's login status
+var session = require("express-session");
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Using the flash middleware provided by connect-flash to store messages in session
+ // and displaying in templates
+var flash = require('connect-flash');
+app.use(flash());
 
 // -------------------------------------------------
 
@@ -41,6 +53,7 @@ db.on("error", function(err) {
 
 // -------------------------------------------------
 
+var routes = require("./server/controllers");
 app.use("/api", routes);
 
 // -------------------------------------------------

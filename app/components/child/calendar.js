@@ -7,8 +7,6 @@ var Calendar = React.createClass({
   render: function() {
 
     return (
-			
-      
       <div>
         <div className="container">
           <div className="row">

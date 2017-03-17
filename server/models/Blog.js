@@ -8,14 +8,14 @@ var BlogSchema = new Schema({
         required: true,
         default: Date.now()
     },
+    email:{
+        type: String,
+        required: true
+    },
     author: {
         type: String,
         required: true
     },
-    // title: {
-    //     type: String,
-    //     required: true
-    // },
     body: {
         type: String,
         required: true
@@ -42,6 +42,4 @@ BlogSchema.statics = {
     }
 };
 
-
 module.exports = mongoose.model("Blog", BlogSchema);
-

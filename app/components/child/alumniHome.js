@@ -3,6 +3,7 @@ var React = require("react");
 var BlogList = require("../blogs/BlogList");
 var BlogForm = require("../blogs/BlogForm");
 var AlumniWebPortalData = require( '../shared/AlumniDataRouter');
+var axios = require('axios');
 
 // var blogs = [
 //     {"author":"All-Brand Supplies Dist.", "body":"It's cold in Seattle."},
@@ -12,13 +13,26 @@ var AlumniWebPortalData = require( '../shared/AlumniDataRouter');
 
 var AlumniHome = React.createClass({
     getInitialState: function(){
-        return {blogs: [], searchId: "", action: "list"};
+        return {blogs: [], searchId: "", action: "list",
+              userData: {}
+    };
         // this.addBlog = this.addBlog.bind(this);
     },
     componentDidMount: function() {
-     this.getInfo();
-     },
-    getInfo: function() {
+      this.getUserInfo();
+     this.getBlogInfo();
+    },
+    getUserInfo: function(){
+      var self = this;
+      axios.get("/api/userinfo").then(function(userData){
+        console.log(userData);
+        if(userData)
+        {
+          self.setState({userData: userData.data});
+        }
+      });
+    },
+    getBlogInfo: function() {
       var self = this;
         AlumniWebPortalData.getBlogs().then(data => {
           console.log(data.data);
@@ -28,26 +42,21 @@ var AlumniHome = React.createClass({
     componentDidUpdate: function(prevProps, prevState){
 
     },
-  handleBlogSubmit: function(blog) {
-    // let blogs = this.state.blogs;
-    // let newBlogs = blogs.concat([blog]);
-    // this.setState({ blogs: newBlogs });
-    // axios.post(this.props.url, comment)
-    //   .catch(err => {
-    //     console.error(err);
-    //     this.setState({ data: comments });
-    //   });
+  handleBlogSubmit: function(blogBody) {
+    var blog = { date: Date.now(), email: this.state.userData.email, author: this.state.userData.firstName + ' ' + this.state.userData.lastName, body: blogBody.body};
     this.addBlog(blog);
   },
     addBlog: function(blog){
       var self = this;
       AlumniWebPortalData.createBlog(blog).then(data => {
           console.log(data.data);
-            self.getInfo();
+            self.getBlogInfo();
         });
     },
   render: function() {
     return (
+
+
 
 
 <div className="section group">
@@ -57,8 +66,8 @@ var AlumniHome = React.createClass({
                 <div className="well profile-well">
                         <div className="text-center">
                           <div className="profile-background"></div>
-                          <img src="/assets/images/Shari_Pic.JPG" className="user-image" alt="Your Name"/>
-                          <h4>User Name</h4>
+                          <img src="/assets/images/Shari_Pic.JPG" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
+                           <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
                         </div>
                         
                         <br/>
@@ -82,14 +91,7 @@ var AlumniHome = React.createClass({
 
                 <BlogList blogs={this.state.blogs} />
 
-                      <ul className="pager">
-                        <li className="previous">
-                          <a href="#">← Older</a>
-                        </li>
-                        <li className="next">
-                          <a href="#">Newer →</a>
-                        </li>
-                      </ul>
+                      
             </div>
             {/*End Blog - Col 2*/}
 
@@ -143,6 +145,10 @@ var AlumniHome = React.createClass({
           </footer>*/}
           {/*End Footer*/}
 </div>
+
+
+
+
     );
   }
 });

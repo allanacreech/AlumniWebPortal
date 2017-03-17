@@ -1,6 +1,9 @@
 body {
     margin: 0;
+    
 }
+
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 .jumbotron {
     padding: 0.5em 0.6em;
@@ -48,7 +51,6 @@ p {
 
 /*Search box items*/
 
-<<<<<<< HEAD
 
 /*DO NOT USE...Would Impact Profile Page. If Needed For Blog, Add ID/Class Name*/
         /*input[type=text] {
@@ -151,7 +153,7 @@ p {
             .col {  margin: 1% 0 1% 0%; }
             .span_1_of_8, .span_2_of_8, .span_3_of_8, .span_4_of_8, .span_5_of_8, .span_6_of_8, .span_7_of_8, .span_8_of_8 { width: 100%; }
         }
-=======
+
 input[type=text] {
     padding: 10px;
     width: 130px;
@@ -167,4 +169,3 @@ input[type=text] {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
->>>>>>> 1ed14c8f01e1f0469fb41a3d86cac2b24653ee17
