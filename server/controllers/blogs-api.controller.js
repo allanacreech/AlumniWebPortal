@@ -12,6 +12,7 @@ function listBlogs(req, res){
 
 function createBlog(req, res){
     var blog = {};
+    blog.email = req.body.email;
     blog.author = req.body.author;
     blog.body = req.body.body;
     Blog.create(blog).then(function(data){

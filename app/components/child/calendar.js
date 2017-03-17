@@ -6,9 +6,7 @@ var Calendar = React.createClass({
   // Here we render the component
   render: function() {
 
-    return (
-			
-      
+    return (    
       <div>
         <div className="container">
           <div className="row">

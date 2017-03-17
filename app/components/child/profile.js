@@ -8,12 +8,27 @@ var Profile = React.createClass({
     return (
       <div>
         <div className="container">
+
+          {/* intro.js :: intro container */}
+
+          {/* PLACE PROFILE INTRO INFO HERE! */}
           <div className="jumbotron" style={{paddingRight: 30, paddingLeft: 30}}>
+            
+            {/* Profile Picture */}
+            <div className="text-center">
+              <img src="/assets/images/250x250-circle.png" className="profilePic"/>
+            </div>
+
             <h2 style={{textAlign: 'center'}}>Michelle Obama</h2>
             <h3 style={{textAlign: 'center'}}>First Lady | Harvard Law School 1988 </h3>
+            <p style={{textAlign: 'center'}}> Chicago, IL </p>
+            <p style={{textAlign: 'center'}}> " S U P E R - W O M A N "</p>
+
             {/* Trigger the modal with a button */}
             <button type="button" id="editIntroBtn" className="btn btn-default btn-circle " data-toggle="modal" data-target="#myModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
+           
             {/* ::Edit Intro:: Modal */}
+
             <div id="myModal" className="modal fade" role="dialog">
               <div className="modal-dialog">
                 {/* Modal content*/}
@@ -22,11 +37,14 @@ var Profile = React.createClass({
                     <button type="button" className="close" data-dismiss="modal">×</button>
                     <h4 className="modal-title">Edit Intro</h4>
                   </div>
+
                   {/* Modal-Body :: Bring on the edits! */} 
                   <div className="modal-body">
                     <form method="POST" id="dataForm">
                       <div className="form-group">
+
                         {/* #profilePhoto */} 
+
                         <div id="mainApp" />
                         {/* #firstName */}
                         <label htmlFor="firstName" className="form-control-label">First Name</label>
@@ -52,10 +70,11 @@ var Profile = React.createClass({
                         {/* #state */}
                         <label htmlFor="state">State</label>
                         <select className="form-control" id="state">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
+                          <option>AL</option>
+                          <option>AK</option>
+                          <option>AZ</option>
+                          <option>AR</option>
+                          <option>CA</option>
                         </select>
                         {/* #summary */} 
                         <label htmlFor="summary" className="form-control-label">Summary</label>
@@ -63,6 +82,7 @@ var Profile = React.createClass({
                       </div>
                     </form>
                   </div>
+
                   {/* Modal-Footer */} 
                   <div className="modal-footer">
                     <button type="button" className="btn btn-default" data-dismiss="modal">Save</button>
@@ -72,11 +92,24 @@ var Profile = React.createClass({
             </div>
           </div> {/* /.jumbotron */} 
         </div> {/* /.container */}
-        {/* Experience container */} 
+
+
+        {/* experience.js :: Experience container */} 
+
         <div className="container">
           <div className="panel panel-default">
             <div className="panel-body">
               <h4 className="panel-title">Experience</h4>
+
+              {/* horizontal line */} 
+              <hr/>
+              
+              {/* PLACE EXPERIENCE INFO HERE! */}
+                <p>Job Title</p>
+                <p>Company</p>
+                <p>Start Date - End Date</p>
+                <p>Description</p>
+
               <div className="card">
                 <div className="card-block">
                   {/* Trigger (Add Work) modal with a button */}
@@ -156,7 +189,7 @@ var Profile = React.createClass({
                               <div className="row">
                                 <div className="col-lg-6">
                                   <input type="checkbox" id="currentJob" />
-                                  <label htmlFor="currentJob">I currently work here</label> 
+                                  <label htmlFor="currentJob"> I currently work here</label> 
                                   {/* </.col-lg-6 */}
                                 </div>
                                 {/* </row */}
@@ -180,11 +213,24 @@ var Profile = React.createClass({
             </div> {/* /.panel-body */}
           </div> {/* /.panel-default */}
         </div> {/* /.container */} 
-        {/* Education container */} 
+
+
+        {/* edication.js ::Education container */} 
+
         <div className="container">
           <div className="panel panel-default">
             <div className="panel-body">
               <h4 className="panel-title">Education</h4>
+
+              {/* horizontal line */} 
+              <hr/>
+
+              {/* PLACE EDUCATION INFO HERE! */}
+                <p>College</p>
+                <p>Degree</p>
+                <p>Field of Study</p>
+                <p>Start Year - End Year</p>
+
               <div className="card">
                 <div className="card-block">
                   {/* Trigger (Add Education) modal with a button */}
@@ -200,66 +246,10 @@ var Profile = React.createClass({
                         </div>
                         {/* Modal-Body :: Add Your Jobs Here! */} 
                         <div className="modal-body">
-                          <form method="POST" id="educationForm">
-                            <div className="form-group">
-                              {/* #school */}
-                              <label htmlFor="school" className="form-control-label">School</label>
-                              <div className="input-group input-group-sm">
-                                <span className="input-group-addon"><i className="fa fa-institution" aria-hidden="true" /></span>
-                                <input type="text" className="form-control" id="school" />
-                              </div>
-                              {/* #degree */}
-                              <label htmlFor="degree" className="form-control-label">Degree</label>
-                              <select className="form-control" id="degree">
-                                <option>A.A. (Associate of Arts)</option>
-                                <option>A.S. (Associate of Science)</option>
-                                <option>A.A.S. (Associate of Applied Science)</option>
-                                <option>A.E. (Associate of Engineering)</option>
-                                <option>A.A.A. (Associate of Applied Arts)</option>
-                              </select>
-                              {/* #additionalDegree */} 
-                              <div className="row" id="addDegree">
-                                <button type="button" id="addDegreeBtn" className="btn btn-default btn-circle btn-add">
-                                  <i className="fa fa-plus" aria-hidden="true" /></button>Add more
-                              </div>
-                              <br />
-                              {/* #fieldOfStudy */}
-                              <label htmlFor="#fieldOfStudy" className="form-control-label">Field of study</label>
-                              <input type="text" className="form-control" id="#fieldOfStudy" />  
-                              {/* #activitiesAndSocieties */} 
-                              <label htmlFor="#activitiesAndSocieties" className="form-control-label">Activities and Societies</label>
-                              <textarea className="form-control" id="#activitiesAndSocieties" defaultValue={""} />
-                              <h6>Ex: Alpha Phi Omega, Marching Band, Volleyball</h6>
-                              {/* to/from year period with dropbox year selection */} 
-                              <div className="row">
-                                <div className="col-sm-9">
-                                  <h6>Time Period</h6>
-                                  <div className="row">
-                                    <div className="col-4 col-sm-6">
-                                      {/* #fromYear */}
-                                      <label htmlFor="fromYear">From Year</label>
-                                      <select className="form-control" id="fromYear">
-                                        <option>1990</option>
-                                        <option>1991</option>
-                                        <option>1992</option>
-                                        <option>1993</option>
-                                      </select>
-                                    </div>
-                                    {/* #toYear */}
-                                    <div className="col-4 col-sm-6">
-                                      <label htmlFor="toYear">To Year</label>
-                                      <select className="form-control" id="toYear">
-                                        <option>1990</option>
-                                        <option>1991</option>
-                                        <option>1992</option>
-                                        <option>1993</option>
-                                      </select>
-                                    </div> {/* /.col-4 col-sm-9  */} 
-                                  </div> {/* /.row */} 
-                                </div> {/* /.col-sm-9 */} 
-                              </div> {/* /. row */} 
-                            </div> {/* /. form-group */}  
-                          </form></div> {/* /.modal-body */} 
+                          
+                        {/*<Education onEducationSubmit ={this.handleEducationSubmit} />*/}
+
+                          </div> {/* /.modal-body */} 
                         {/* Modal-Footer */} 
                         <div className="modal-footer">
                           <button type="button" className="btn btn-default" data-dismiss="modal">Save</button>
@@ -271,12 +261,23 @@ var Profile = React.createClass({
               </div> {/* /.card */} 
             </div> {/* /.panel-body */}
           </div> {/* /.panel-default */}
-        </div> {/* /.container */} 
-        {/* Organizations container */} 
+        </div> {/* /.container */}
+
+
+        {/* organizations.js :: Organizations container */} 
+
         <div className="container">
           <div className="panel panel-default">
             <div className="panel-body">
               <h4 className="panel-title">Organizations</h4>
+
+              {/* horizontal line */} 
+              <hr/>
+
+              {/* PLACE ORGANIZATIONS INFO HERE! */}
+                <p>Organization</p>
+                <p>Description</p>
+
               <div className="card">
                 <div className="card-block">
                   {/* Trigger (Add Organizations) modal with a button */}
