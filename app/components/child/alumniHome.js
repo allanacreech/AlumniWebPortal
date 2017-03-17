@@ -67,7 +67,11 @@ var AlumniHome = React.createClass({
                         <div className="text-center">
                           <div className="profile-background"></div>
                           <img src="/assets/images/Shari_Pic.JPG" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
+<<<<<<< HEAD
                            <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
+=======
+                          <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
+>>>>>>> b18c9ceebc8bdb507233e644acba861fdc7a9a0b
                         </div>
                         
                         <br/>
@@ -91,7 +95,11 @@ var AlumniHome = React.createClass({
 
                 <BlogList blogs={this.state.blogs} />
 
+<<<<<<< HEAD
                       
+=======
+ 
+>>>>>>> b18c9ceebc8bdb507233e644acba861fdc7a9a0b
             </div>
             {/*End Blog - Col 2*/}
 

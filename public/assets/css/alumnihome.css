@@ -51,7 +51,10 @@ p {
 
 /*Search box items*/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b18c9ceebc8bdb507233e644acba861fdc7a9a0b
 /*DO NOT USE...Would Impact Profile Page. If Needed For Blog, Add ID/Class Name*/
         /*input[type=text] {
             padding: 10px;
@@ -168,4 +171,8 @@ input[type=text] {
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b18c9ceebc8bdb507233e644acba861fdc7a9a0b

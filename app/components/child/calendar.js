@@ -6,7 +6,11 @@ var Calendar = React.createClass({
   // Here we render the component
   render: function() {
 
+<<<<<<< HEAD
     return (
+=======
+    return (    
+>>>>>>> b18c9ceebc8bdb507233e644acba861fdc7a9a0b
       <div>
         <div className="container">
           <div className="row">
