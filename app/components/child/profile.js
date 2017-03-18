@@ -16,7 +16,7 @@ var Profile = React.createClass({
             
             {/* Profile Picture */}
             <div className="text-center">
-              <img src="/assets/images/250x250-circle.png" className="profilePic"/>
+              <img src="/assets/images/gridImages/17.jpg" className="profilePic"/>
             </div>
 
             <h2 style={{textAlign: 'center'}}>Michelle Obama</h2>

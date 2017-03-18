@@ -8,8 +8,19 @@
   padding-right: 30px;
   padding-left: 30px;
   border-radius: 25px;
+  background-color: #fff;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
+.profilePic{
+  margin-top: 10px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border-width:5px;
+  box-shadow: -1px 2px 14px 1px rgba(0, 0, 0, 0.55); 
+}
+
+
 h2{
   text-align: center;
 }
@@ -77,18 +88,37 @@ h3{
   line-height: 1.428571429;
   border-radius: 15px;
 }
+#editIntroBtn{
+    position: absolute;
+    left: 91%;
+    bottom: 34%;
+}
+
 #editIntroBtn, #addExperienceBtn, #addEducationBtn, #addOrganizationBtn{
   float: right;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
-.panel .panel-default, .panel-body{
+.panel, .panel-default{
   padding-right: 30px;
   padding-left: 30px;
+  border-radius: 6px;
+  border-color: #fff;
+  background-color: #fff;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.panel-body{
+  padding-right: 0px;
+  padding-left: 0px;
+  border-color: #fff;
+  background-color: #fff;
 }
 .entry:not(:first-of-type)
 {
   margin-top: 8px;
+}
+
+#dataForm {
+  width: 100%;
 }
 #addDegree {
   font-size: 12px;
@@ -102,3 +132,4 @@ h3{
   padding: 0px;
   border: 0px;
 }
+

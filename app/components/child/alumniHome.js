@@ -57,91 +57,50 @@ var AlumniHome = React.createClass({
     return (
 
 
-<div className="section group">
+<div className="container">
+  <div className="row">
 
-            {/*Profile - Col 1*/}
-            <div className="col span_2_of_8">
-                <div className="well profile-well">
-                        <div className="text-center">
-                          <div className="profile-background"></div>
-                          <img src="/assets/images/Shari_Pic.JPG" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
-                          <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
-                        </div>
-                        
-                        <br/>
-                        <p>Headline</p>
+    {/*Profile Area*/}
+    <div className="col span_2_of_8">
+      <div className="well profile-well">
+        <div className="text-center"><img src="/assets/images/gridImages/17.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
+        <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
+        </div>
+        <br/>
+        <p>Headline</p>
+      </div>
+    </div>
+    {/*End Profile Area*/}
 
-                  </div>
-            </div>
-            {/*End Profile - Col 1*/}
+    {/*Blog Area*/}
+    <div className="col span_4_of_8">
+      <div className="well blog-well">
+      <h1 className="page-header">Blog Goes Here<small> Secondary Text</small></h1>
+        <div>
+          <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
+        </div>
+          <BlogList blogs={this.state.blogs} />
+      </div>
+    </div>
+    {/*End Blog Area*/}
 
-
-            {/*Blog - Col 2*/}
-            <div className="col span_4_of_8">
-                <h1 className="page-header">
-                  Blog Goes Here
-                  <small> Secondary Text</small>
-                </h1>
-
-                <div>
-                  <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
+    {/*Blog Search Area*/}
+    <div className="col span_2_of_8">
+        <div className="well blogSearch-well">
+            <h4>Blog Search</h4>
+                <div className="input-group">
+                  <input type="text" className="form-control" />
+                    <span className="input-group-btn">
+                      <button className="btn btn-default" type="button">
+                    <span className="glyphicon glyphicon-search" />
+                      </button>
+                    </span>
                 </div>
+        </div>
+      </div>
+    {/*End Blog Search Area*/}
 
-                <BlogList blogs={this.state.blogs} />
-
- 
-            </div>
-            {/*End Blog - Col 2*/}
-
-
-            {/*Blog Search/Events - Col 3*/}
-            <div className="col span_2_of_8">
-
-                {/*Blog Search Well*/}
-                <div className="well">
-                  <h4>Blog Search</h4>
-                    <div className="input-group">
-                      <input type="text" className="form-control" />
-                        <span className="input-group-btn">
-                          <button className="btn btn-default" type="button">
-                            <span className="glyphicon glyphicon-search" />
-                          </button>
-                        </span>
-                    </div>
-                 </div>
-
-
-                {/*Events Well*/}
-                <div className="well">
-                  <h4>Blog Categories</h4>
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <ul className="list-unstyled">
-                          <li><a href="#">Category Name</a></li>
-                          <li><a href="#">Category Name</a></li>
-                          <li><a href="#">Category Name</a></li>
-                          <li><a href="#">Category Name</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                {/*End Blog Search/Events Col*/}
-
-
-          {/*Footer*/}
-          {/*<footer>
-            <div className="row">
-
-              <div className="col-lg-12">
-                <p>Copyright © Your Website 2014</p>
-              </div>
-
-            </div>
-            {this.props.children}
-          </footer>*/}
-          {/*End Footer*/}
+  </div> 
 </div>
     );
   }
