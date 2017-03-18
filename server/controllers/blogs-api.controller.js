@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> d4260aa7a5be7fb1d8013d1c3335188f0351fae1
 // This is middleware for restrictng routes a user is not allowed to visit if not logged in
 module.exports = function(req, res, next) {
   // If the user is logged in, continue with the request to the restricted route
@@ -37,3 +41,7 @@ router.route("/create").post(createBlog);
 // router.route("/:count").get(listLimitedSales);
 
 module.exports = router;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d4260aa7a5be7fb1d8013d1c3335188f0351fae1
