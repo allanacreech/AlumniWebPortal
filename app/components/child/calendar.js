@@ -6,12 +6,7 @@ var Calendar = React.createClass({
   // Here we render the component
   render: function() {
 
-<<<<<<< HEAD
     return (
-=======
-    return (    
->>>>>>> b18c9ceebc8bdb507233e644acba861fdc7a9a0b
-      <div>
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
@@ -47,11 +42,13 @@ var Calendar = React.createClass({
         <a className="thumbnail" href="#">
           <img className="img-responsive" src="/assets/images/OhioState.jpg" alt />
         </a>
-      </div><div className="col-lg-3 col-md-4 col-xs-6 thumb">
+      </div>
+      <div className="col-lg-3 col-md-4 col-xs-6 thumb">
         <a className="thumbnail" href="#">
           <img className="img-responsive" src="/assets/images/OhioState.jpg" alt />
         </a>
-      </div><div className="col-lg-3 col-md-4 col-xs-6 thumb">
+      </div>
+      <div className="col-lg-3 col-md-4 col-xs-6 thumb">
         <a className="thumbnail" href="#">
           <img className="img-responsive" src="/assets/images/OhioState.jpg" alt />
         </a>
@@ -61,7 +58,10 @@ var Calendar = React.createClass({
         <hr />
       </div>
       </div>
-      </div>
     );
   }
-});module.exports = Calendar;
+
+
+});
+
+module.exports = Calendar;

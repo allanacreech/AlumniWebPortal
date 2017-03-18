@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-image: url('/assets/images/alumniHome_BubbleBkg.jpg');
     
 }
 
@@ -51,10 +52,6 @@ p {
 
 /*Search box items*/
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b18c9ceebc8bdb507233e644acba861fdc7a9a0b
 /*DO NOT USE...Would Impact Profile Page. If Needed For Blog, Add ID/Class Name*/
         /*input[type=text] {
             padding: 10px;
@@ -171,8 +168,16 @@ input[type=text] {
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-<<<<<<< HEAD
 }
-=======
+
+/*Profile Box*/
+.well {
+	background-color: #f2f3f3;
+	border-radius: 8px;
+	height: 550px;
+	box-shadow: 10px 10px 30px 5px #595959;
 }
->>>>>>> b18c9ceebc8bdb507233e644acba861fdc7a9a0b
+
+.BlogForm {
+    width: 50px;
+}
