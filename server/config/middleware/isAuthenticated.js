@@ -19,9 +19,4 @@ module.exports = function(req, res, next) {
 
   // If the user isnt' logged in, redirect them to the dashboard which has the login form
   return res.redirect("/");
-<<<<<<< HEAD
 };
-=======
-};
-
->>>>>>> d4260aa7a5be7fb1d8013d1c3335188f0351fae1

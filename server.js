@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-var DatabaseSeeder = require("./server/seed-data/seed");
+// var DatabaseSeeder = require("./server/seed-data/seed");
 
 // Create Instance of Express
 var app = express();
