@@ -66,8 +66,14 @@ var AlumniHome = React.createClass({
         <div className="text-center"><img src="/assets/images/gridImages/17.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
         <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
         </div>
-        <br/>
-        <p>Headline</p>
+        <hr/>
+
+        {/* Pulling userData - classOf + headLine info */}
+          <ul className="intro-list-group"style = {{listStyle: "none"}}>
+            <li>Class of {this.state.userData.classOf}</li>
+            <li>{('"' + this.state.userData.headline + '"')}</li>
+          </ul>
+          
       </div>
     </div>
     {/*End Profile Area*/}
@@ -75,7 +81,7 @@ var AlumniHome = React.createClass({
     {/*Blog Area*/}
     <div className="col span_4_of_8">
       <div className="well blog-well">
-      <h1 className="page-header">Blog Goes Here<small> Secondary Text</small></h1>
+      <h1 className="page-header">Blog Goes Here</h1>
         <div>
           <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
         </div>
