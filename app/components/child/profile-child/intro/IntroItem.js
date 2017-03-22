@@ -3,7 +3,7 @@ var React = require("react");
 var IntroItem = React.createClass({
     render: function() {
         return (
-        <div className="row">
+        <div className="row dataStyle">
             <div className="col-md-12">
                 {/* Profile Picture */}
                 <div className="text-center">
@@ -15,8 +15,7 @@ var IntroItem = React.createClass({
                    <li>{(this.props.userData.address?this.props.userData.address.city + ', ':"") 
                        + (this.props.userData.address?this.props.userData.address.state:"")}</li>
                    <li>{(this.props.userData.headline?'"' + this.props.userData.headline + '"':"")}</li>
-                 </ul>
-                {/*<a className="btn btn-primary" href="#">Read More <span className="glyphicon glyphicon-chevron-right" /></a>*/}
+</ul>
                 <hr />
               </div>
         </div>
