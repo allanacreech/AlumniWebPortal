@@ -21,6 +21,11 @@ body {
 	z-index: 1;
 }
 
+.right-buttons {
+	float: right;
+	margin-left: 10px;
+}
+
 .row {
 	padding-left: 0;
 }

@@ -178,6 +178,10 @@ input[type=text] {
 	box-shadow: 10px 10px 30px 5px #595959;
 }
 
+.blog-well {
+    overflow: auto;
+}
+
 .BlogForm {
     width: 50px;
 }
