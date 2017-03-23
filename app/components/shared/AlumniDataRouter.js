@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use strict";
 var axios = require("axios");
 
@@ -26,7 +26,7 @@ var AlumniWebPortalData = {
     }    
 };
 
-=======
+
 "use strict";
 var axios = require("axios");
 
@@ -54,5 +54,5 @@ var AlumniWebPortalData = {
     }    
 };
 
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
+
 module.exports = AlumniWebPortalData;
