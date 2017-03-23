@@ -156,11 +156,11 @@ p {
 
 input[type=text] {
     padding: 10px;
-<<<<<<< HEAD
+
     width: auto;
-=======
+
     width: 100%;
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
+
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;

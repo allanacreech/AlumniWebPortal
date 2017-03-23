@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use strict";
 var User = require("../models/User");
 var express = require("express");
@@ -62,7 +62,7 @@ router.route("/updateIntro/:id").post(isAuthenticated, updateIntroInfo);
 router.route("/updateExperience/:id").post(isAuthenticated, updateExperienceInfo);
 router.route("/updateEducation/:id").post(isAuthenticated, updateEducationInfo);
 
-=======
+
 "use strict";
 var User = require("../models/User");
 var express = require("express");
@@ -126,5 +126,5 @@ router.route("/updateIntro/:id").post(isAuthenticated, updateIntroInfo);
 router.route("/updateExperience/:id").post(isAuthenticated, updateExperienceInfo);
 router.route("/updateEducation/:id").post(isAuthenticated, updateEducationInfo);
 
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
+
 module.exports = router;

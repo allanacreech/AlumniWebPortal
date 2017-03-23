@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .btn-default {
     color: #555;
     background-color: rgba(0,0,0,.0001);
@@ -21,9 +21,6 @@
   box-shadow: -1px 2px 14px 1px rgba(0, 0, 0, 0.55); 
 }
 
-
-=======
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
 h2{
   text-align: center;
 }
@@ -97,7 +94,6 @@ h3{
   border-color: #fff;
   background-color: #fff;
 }
-<<<<<<< HEAD
 .entry:not(:first-of-type)
 {
   margin-top: 8px;
@@ -119,7 +115,6 @@ h3{
   border: 0px;
 }
 
-=======
 .entry:not(:first-of-type){
   margin-top: 8px;
 }
@@ -129,4 +124,4 @@ h3{
 .dataStyle{
   color: red;
 }
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
+
