@@ -54,11 +54,7 @@ var EducationForm = React.createClass( {
                         </div>
                 <div className="modal-body">
     <form method="POST" id="educationForm" onSubmit={this.handleSubmit}>
-<<<<<<< HEAD
                         {/* Modal-Body :: Add Your Jobs Here! */} 
-=======
-    {/* Modal-Body :: Add Education Info Here! */} 
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
     <div className="form-group">
         {/* #school */}
         <label htmlFor="school" className="form-control-label">School</label>
@@ -76,15 +72,12 @@ var EducationForm = React.createClass( {
         <option>A.E. (Associate of Engineering)</option>
         <option>A.A.A. (Associate of Applied Arts)</option>
         </select>
-<<<<<<< HEAD
         {/* #additionalDegree */} 
         <div className="row" id="addDegree">
         <button type="button" id="addDegreeBtn" className="btn btn-default btn-circle btn-add">
             <i className="fa fa-plus" aria-hidden="true" /></button>Add more
         </div>
         <br />
-=======
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
         {/* #fieldOfStudy */}
         <label htmlFor="fieldOfStudy" className="form-control-label">Field of study</label>
         <input type="text" className="form-control" id="fieldOfStudy" value= {this.state.fieldOfStudy} onChange= {this.handleFieldOfStudyChange} />  
@@ -123,18 +116,10 @@ var EducationForm = React.createClass( {
         </div> {/* /.col-sm-9 */} 
         </div> {/* /. row */} 
       </div> {/* /. form-group */}  
-<<<<<<< HEAD
               <input role="button" className="btn btn-default" type = "submit" value = "Save" />
       </form>
  </div> {/* /.modal-body */} 
     <div className="modal-footer"> {/* Modal-Footer */} 
-=======
-      <br/>
-        <input role="button" className="btn btn-default" type = "submit" value = "Save" />
-      </form>
- </div> {/* /.modal-body */} 
-<div className="modal-footer"> {/* Modal-Footer */} 
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
 <button type="button" className="btn btn-default" data-dismiss="modal">Done</button>
 </div>
 </div> {/* /. modal-content */} 
@@ -147,5 +132,3 @@ var EducationForm = React.createClass( {
 });
 
 module.exports =  EducationForm;
-                         
-                          

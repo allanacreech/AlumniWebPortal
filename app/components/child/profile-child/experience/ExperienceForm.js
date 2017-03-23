@@ -76,7 +76,6 @@ var ExperienceForm = React.createClass( {
                               <label htmlFor="jobLocation" className="form-control-label">Location</label>
                               <input type="text" className="form-control" id="jobLocation" value= {this.state.jobLocation} onChange= {this.handleJobLocationChange} />
                               {/* start/end work period with dropbox (month + year) selection */} 
-<<<<<<< HEAD
                               <div className="row">
                                 <div className="col-sm-9">
                                   <h6>Time Period</h6>
@@ -85,39 +84,15 @@ var ExperienceForm = React.createClass( {
                                       <h5>From</h5>
                                       {/* #startMonth */}
                                       <label htmlFor="startMonth">Month</label>
-=======
-                              <br/>
-                              <div className="row">
-                                <div className="col-sm-9">
-                                  <h6>Time Period</h6>
-                                   <div className="row">
-                                    <div className="col-4 col-sm-6">
-                                      {/* #startMonth */}
-                                      <label htmlFor="startMonth">Start Month</label>
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
                                       <select className="form-control" id="startMonth" value= {this.state.startMonth} onChange= {this.handleStartMonthChange}>
                                         <option>-</option>
                                         <option>January</option>
                                         <option>February</option>
                                         <option>March</option>
                                         <option>April</option>
-<<<<<<< HEAD
                                       </select>
                                       {/* #startYear */}
                                       <label htmlFor="startYear">Year</label>
-=======
-                                        <option>May</option>
-                                        <option>June</option>
-                                        <option>July</option>
-                                        <option>August</option>
-                                        <option>September</option>
-                                        <option>October</option>
-                                        <option>November</option>
-                                        <option>December</option>
-                                      </select>
-                                      {/* #startYear */}
-                                      <label htmlFor="startYear">Start Year</label>
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
                                       <select className="form-control" id="startYear" value= {this.state.startYear} onChange= {this.handleStartYearChange}>
                                         <option>-</option>
                                         <option>1990</option>
@@ -127,37 +102,18 @@ var ExperienceForm = React.createClass( {
                                       </select>
                                     </div>
                                     <div className="col-4 col-sm-6">
-<<<<<<< HEAD
                                       <h5>To</h5>
                                       {/* #endMonth */}
                                       <label htmlFor="endMonth">Month</label>
-=======
-                                      {/* #endMonth */}
-                                      <label htmlFor="endMonth">End Month</label>
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
                                       <select className="form-control" id="endMonth" value= {this.state.endMonth} onChange= {this.handleEndMonthChange}>
                                         <option>-</option>
                                         <option>January</option>
                                         <option>February</option>
                                         <option>March</option>
                                         <option>April</option>
-<<<<<<< HEAD
                                       </select>
                                       {/* #endYear */}
                                       <label htmlFor="endYear">Year</label>
-=======
-                                        <option>May</option>
-                                        <option>June</option>
-                                        <option>July</option>
-                                        <option>August</option>
-                                        <option>September</option>
-                                        <option>October</option>
-                                        <option>November</option>
-                                        <option>December</option>
-                                      </select>
-                                      {/* #endYear */}
-                                      <label htmlFor="endYear">End Year</label>
->>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
                                       <select className="form-control" id="endYear" value= {this.state.endYear} onChange= {this.handleEndYearChange}>
                                          <option>-</option>
                                        <option>1990</option>
