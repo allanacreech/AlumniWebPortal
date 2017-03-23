@@ -4,7 +4,7 @@ var React = require("react");
 var EducationItem = React.createClass({
     render: function() {
         return (
-        <div className="row dataStyle">
+        <div className="row">
             <div className="col-md-12">
                 <ul className="list-group" style = {{listStyle: "none"}}>
                    <li>{this.props.schoolInfo.schoolName}</li>
