@@ -63,7 +63,7 @@ var AlumniHome = React.createClass({
     {/*Profile Area*/}
     <div className="col span_2_of_8">
       <div className="well profile-well">
-        <div className="text-center"><img src="/assets/images/Shari_Pic.JPG" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
+        <div className="text-center"><img src="/assets/images/gridImages/17.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
         <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
         </div>
         <br/>
