@@ -38,7 +38,7 @@ p {
     padding: 0 0;
     transition: all 0.3s ease;
     color: white;
-    font-size: 36px;
+    font-size: 20px;
 }
 
 .icon-bar a:hover {
@@ -156,16 +156,39 @@ p {
 
 input[type=text] {
     padding: 10px;
+<<<<<<< HEAD
     width: auto;
+=======
+    width: 100%;
+>>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
     /*background-image: url('searchicon.png');*/
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 20px 12px 20px 12px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    resize: auto;
+    cursor: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+textarea {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    /*background-image: url('searchicon.png');*/
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 20px 12px 20px 12px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
@@ -178,6 +201,10 @@ input[type=text] {
 	box-shadow: 10px 10px 30px 5px #595959;
 }
 
+.blog-well {
+    overflow: auto;
+}
+
 .BlogForm {
-    width: 50px;
+    width: 100%;
 }

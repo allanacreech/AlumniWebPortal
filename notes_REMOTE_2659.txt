@@ -1,0 +1,4 @@
+In package.json:
+  // "main": "public/index.html",
+  "main": "index.js",
+

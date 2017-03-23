@@ -39,10 +39,8 @@ var BlogForm = React.createClass( {
           placeholder='Say something...'
           value={ this.state.body }
           onChange={ this.handleBodyChange } />
-          <br />
-        <input
-          type='submit'
-          value='Post'/>
+          <hr />
+        <input role="button" className="btn btn-default" type = 'submit' value = 'Post' />
       </form>
     )
   }

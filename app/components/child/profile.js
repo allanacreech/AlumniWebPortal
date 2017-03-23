@@ -67,10 +67,12 @@ var Profile = React.createClass({
       <div>
         <div className="container">
 
-          {/* intro.js :: intro container */}
+          {/* :: Intro container */}
 
           {/* PLACE PROFILE INTRO INFO HERE! */}
-          <div className="jumbotron" style={{paddingRight: 30, paddingLeft: 30}}>
+          <div className="panel panel-default">
+          <div className="panel-body">
+          {/*<div className="jumbotron" style={{paddingRight: 30, paddingLeft: 30}}>*/}
             
             <div className="introData">
               <IntroItem userData={this.state.userData}/>
@@ -81,11 +83,16 @@ var Profile = React.createClass({
             {/* ::Edit Intro:: Modal */}
 
             <IntroForm onIntroSubmit = {this.handleIntroSubmit} />
+<<<<<<< HEAD
           </div> {/* /.jumbotron */} 
+=======
+          </div> {/* /.panel-default */} 
+         </div> {/* /.panel-body */} 
+>>>>>>> 6a4ffae98a0d14601df290d9dc6697082eac39a6
         </div> {/* /.container */}
 
 
-        {/* experience.js :: Experience container */} 
+        {/* :: Experience container */} 
 
         <div className="container">
           <div className="panel panel-default">
@@ -113,7 +120,7 @@ var Profile = React.createClass({
         </div> {/* /.container */} 
 
 
-        {/* edication.js ::Education container */} 
+        {/* :: Education container */} 
 
         <div className="container">
           <div className="panel panel-default">
