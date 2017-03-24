@@ -14,7 +14,8 @@ var axios = require('axios');
 var AlumniHome = React.createClass({
     getInitialState: function(){
         return {blogs: [], searchId: "", action: "list",
-              userData: {}
+              userData: {}, mySideNavStyle: {width:"0px"},
+              myMainStyle: {marginLeft:"0px"}
     };
         // this.addBlog = this.addBlog.bind(this);
     },
@@ -53,60 +54,95 @@ var AlumniHome = React.createClass({
             self.getBlogInfo();
         });
     },
+    
+    openNav: function(){
+     this.setState({myMainStyle: {marginLeft: "250px"}, mySideNavStyle: {width:"250px"}});
+    },
+
+ 
+    closeNav: function(){
+     this.setState({myMainStyle: {marginLeft: "0px"}, mySideNavStyle: {width:"0px"}});
+    },
+
   render: function() {
     return (
 
 
 <div className="container">
-  <div className="row">
+  <div className="row" id="mainRow">
 
-    {/*Profile Area*/}
-    <div className="col span_2_of_8">
-      <div className="well profile-well">
-        <div className="text-center"><img src="/assets/images/gridImages/17.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
-        <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
-        </div>
-        <hr/>
+    <div>
+        <div id="mySidenav" className="sidenav" style={this.state.mySideNavStyle}>
+          <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>×</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+      </div>
+{/* Use any element to open the sidenav */}
+    <i className="fa fa-bars fa-5x"  onClick={this.openNav}></i> 
+         
+      </div> 
+{/* Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page */}
+        
+        <div id="main" style={this.state.myMainStyle}>
 
-        {/* Pulling userData - classOf + headLine info */}
-          <ul className="intro-list-group"style = {{listStyle: "none"}}>
-            <li>Class of {this.state.userData.classOf}</li>
-            <li>{('"' + this.state.userData.headline + '"')}</li>
-          </ul>
+        
+{/*Profile Area*/}
+            <div className="col span_2_of_8">
+              <div className="well profile-well">
+                  <div className="text-center">
+                    <img src="/assets/images/gridImages/17.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
+                    <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
+                  </div>
+                  <hr/>
+
+{/* Pulling userData - classOf + headLine info */}
+                    <ul className="intro-list-group"style = {{listStyle: "none"}}>
+                    <li>Class of {this.state.userData.classOf}</li>
+                    <li>{('"' + this.state.userData.headline + '"')}</li>
+                    </ul>
           
-      </div>
-    </div>
-    {/*End Profile Area*/}
+              </div>
+            </div>
+{/*End Profile Area*/}
 
-    {/*Blog Area*/}
-    <div className="col span_4_of_8">
-      <div className="well blog-well">
-      <h1 className="page-header">Blog Goes Here</h1>
-        <div>
-          <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
-        </div>
-          <BlogList blogs={this.state.blogs} />
-      </div>
-    </div>
-    {/*End Blog Area*/}
+{/*Blog Area*/}
+            <div className="col span_4_of_8">
+              <div className="well blog-well">
+                <h1 className="page-header">Blog Goes Here</h1>
+              <div>
+                <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
+              </div>
+                <BlogList blogs={this.state.blogs} />
+              </div>
+            </div>
+{/*End Blog Area*/}
 
-    {/*Blog Search Area*/}
-    <div className="col span_2_of_8">
-        <div className="well blogSearch-well">
-            <h4>Blog Search</h4>
-                <div className="input-group">
-                  <input type="text" className="form-control" />
-                    <span className="input-group-btn">
-                      <button className="btn btn-default" type="button">
-                    <span className="glyphicon glyphicon-search" />
-                      </button>
-                    </span>
+{/*Blog Search Area*/}
+            <div className="col span_2_of_8">
+                <div className="well blogSearch-well">
+                    <h4>Blog Search</h4>
+                      <div className="input-group">
+                        <input type="text" className="form-control" />
+                          <span className="input-group-btn">
+                            <button className="btn btn-default" type="button">
+                          <span className="glyphicon glyphicon-search" />
+                            </button>
+                          </span>
+                      </div>
                 </div>
+              </div>
+{/*End Blog Search Area*/}
+        
+        
         </div>
       </div>
-    {/*End Blog Search Area*/}
+{/*End of the Sidebar menu*/}
 
-  </div> 
+
+  
+  {/*end of container*/}
 </div>
     );
   }

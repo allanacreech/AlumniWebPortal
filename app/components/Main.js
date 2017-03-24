@@ -7,19 +7,19 @@ var Main = React.createClass({
   render: function() {
 
     return (
-      <div className="container">
+      <div>
 
-        <div className="row">
+        
 
           
 
-          <div className="container">
+         
 
             {/* Added this.props.children to dump all of the child components into place */}
             {this.props.children}
 
-          </div>
-        </div>
+          
+        
 
       </div>
     );

@@ -7,7 +7,7 @@ var Calendar = React.createClass({
   render: function() {
 
     return (
-        <div className="container">
+        <div  className="container">
           <div className="row">
             <div className="col-xs-12">
               <h1 className="page-header">News and Events</h1>
@@ -57,6 +57,7 @@ var Calendar = React.createClass({
           
         <hr />
       </div>
+      {/*close container*/}
       </div>
     );
   }

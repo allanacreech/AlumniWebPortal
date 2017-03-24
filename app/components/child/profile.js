@@ -64,7 +64,7 @@ var Profile = React.createClass({
 
     return (
 
-      <div>
+    
         <div className="container">
 
           {/* intro.js :: intro container */}
@@ -82,12 +82,12 @@ var Profile = React.createClass({
 
             <IntroForm onIntroSubmit = {this.handleIntroSubmit} />
           </div> {/* /.jumbotron */} 
-        </div> {/* /.container */}
+        
 
 
         {/* experience.js :: Experience container */} 
 
-        <div className="container">
+        <div className="row">
           <div className="panel panel-default">
             <div className="panel-body">
               <h4 className="panel-title">Experience</h4>
@@ -110,12 +110,12 @@ var Profile = React.createClass({
               </div> {/* /.card */} 
             </div> {/* /.panel-body */}
           </div> {/* /.panel-default */}
-        </div> {/* /.container */} 
+        </div> {/* /.row */} 
 
 
         {/* edication.js ::Education container */} 
 
-        <div className="container">
+        <div className="row">
           <div className="panel panel-default">
             <div className="panel-body">
               <h4 className="panel-title">Education</h4>
@@ -137,11 +137,10 @@ var Profile = React.createClass({
               </div> {/* /.card */} 
             </div> {/* /.panel-body */}
           </div> {/* /.panel-default */}
-        </div> {/* /.container */}
+        </div> {/* /.row*/}
 
-
-
-      </div>
+{/* /close container*/}
+</div>
     );
   }
 });
