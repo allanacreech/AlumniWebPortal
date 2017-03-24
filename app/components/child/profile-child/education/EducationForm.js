@@ -65,12 +65,29 @@ var EducationForm = React.createClass( {
         {/* #degree */}
         <label htmlFor="degree" className="form-control-label">Degree</label>
         <select className="form-control" id="degree" value= {this.state.degree} onChange= {this.handleDegreeChange} >
-        <option>-</option>
-        <option>A.A. (Associate of Arts)</option>
-        <option>A.S. (Associate of Science)</option>
-        <option>A.A.S. (Associate of Applied Science)</option>
-        <option>A.E. (Associate of Engineering)</option>
-        <option>A.A.A. (Associate of Applied Arts)</option>
+          <option>-</option>
+          <option>A.A. (Associate of Arts)</option>
+          <option>A.S. (Associate of Science) </option>
+          <option>A.A.S. (Associate of Applied Science) </option>
+          <option>A.E. (Associate of Engineering) </option>
+          <option>A.A.A. (Associate of Applied Arts) </option>
+          <option>A.P.S. (Associate of Political Science) </option>
+          <option>B.A. (Bachelor of Arts) </option>
+          <option>B.S. (Bachelor of Science) </option>
+          <option>B.F.A. (Bachelor of Fine Arts) </option>
+          <option>B.B.A. (Bachelor of Business Administration) </option>
+          <option>B.Arch. (Bachelor of Architecture) </option>
+          <option>M.A. (Master of Arts) </option>
+          <option>M.F.A. (Master of Fine Arts) </option>
+          <option>M.S. (Master of Science) </option>
+          <option>M.Res. (Master of Research) </option>
+          <option>M.Phil. (Master of Philosophy) </option>
+          <option>LL.M. (Master of Laws) </option>
+          <option>M.B.A. (Master of Business Administration) </option>
+          <option>PhD (Doctor of Philosophy) </option>
+          <option>M.D. (Doctor of Medicine) </option>
+          <option>Ed.D. (Doctor of Education) </option>
+          <option>J.D. (Juris Doctor) </option>
         </select>
         {/* #additionalDegree */} 
         <div className="row" id="addDegree">
