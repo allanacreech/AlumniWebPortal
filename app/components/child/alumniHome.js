@@ -68,19 +68,43 @@ var AlumniHome = React.createClass({
     return (
 
 
-<div className="container">
+<div className="container-fluid">
   <div className="row" id="mainRow">
 
     <div>
+      <i className="fa fa-bars fa-5x"  onClick={this.openNav}></i> 
         <div id="mySidenav" className="sidenav" style={this.state.mySideNavStyle}>
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>×</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+          <a href="#">Business</a>
+          <a href="#">Career</a>
+          <a href="#">Celebrity Gossip</a>
+          <a href="#">DIY</a>
+          <a href="#">Economics</a>
+          <a href="#">Education</a>
+          <a href="#">Entertainment</a>
+          <a href="#">Fashion</a>
+          <a href="#">Finance</a>
+          <a href="#">Food</a>
+          <a href="#">Gaming</a>
+          <a href="#">History</a>
+          <a href="#">Lifestyle</a>
+          <a href="#">Marketing</a>
+          <a href="#">Medical</a>
+          <a href="#">Soical Media</a>
+          <a href="#">Nature</a>
+          <a href="#">Parenting</a>
+          <a href="#">Pet</a>
+          <a href="#">Political</a>
+          <a href="#">Real Estate</a>
+          <a href="#">Shopping</a>
+          <a href="#">Shopping</a>
+          <a href="#">Sports</a>
+          <a href="#">Technology</a>
+          <a href="#">Travel</a>
+          <a href="#">Wedding</a>
       </div>
 {/* Use any element to open the sidenav */}
-    <i className="fa fa-bars fa-5x"  onClick={this.openNav}></i> 
+    
          
       </div> 
 {/* Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page */}
@@ -89,7 +113,7 @@ var AlumniHome = React.createClass({
 
         
 {/*Profile Area*/}
-            <div className="col span_2_of_8">
+            <div className="col span_4_of_8">
               <div className="well profile-well">
                   <div className="text-center">
                     <img src="/assets/images/gridImages/17.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
@@ -120,7 +144,7 @@ var AlumniHome = React.createClass({
 {/*End Blog Area*/}
 
 {/*Blog Search Area*/}
-            <div className="col span_2_of_8">
+            {/*<div className="col span_2_of_8">
                 <div className="well blogSearch-well">
                     <h4>Blog Search</h4>
                       <div className="input-group">
@@ -132,7 +156,7 @@ var AlumniHome = React.createClass({
                           </span>
                       </div>
                 </div>
-              </div>
+              </div>*/}
 {/*End Blog Search Area*/}
         
         
