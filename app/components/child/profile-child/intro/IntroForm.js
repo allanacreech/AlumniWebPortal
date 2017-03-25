@@ -1,4 +1,6 @@
+"use strict";
 var React = require('react');
+var axios = require('axios');
 
 var IntroForm = React.createClass( {
   getInitialState: function(){
@@ -7,9 +9,43 @@ var IntroForm = React.createClass( {
     // this.handleBodyChange = this.handleBodyChange.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   },  
-  // handleImageURLChange: function(e) {
-  //   this.setState({ imageURL: e.target.value });
-  // },
+    componentDidMount: function() {
+      this.setUpForm();
+    },
+  setUpForm: function(){
+      var self = this;
+      axios.get("/api/userinfo/all").then(function(userData){
+     var address = {
+       country: "",
+       city: "",
+       city: "",
+       state: "",
+       zip: ""
+     };
+     console.log("address: ");
+     console.log(userData.data);
+     if(userData.data.address)
+     {
+       if(userData.data.address.country)
+       {
+         address.country = userData.data.address.country;
+       }
+       if(userData.data.address.city)
+       {
+         address.city = userData.data.address.city;
+       }
+       if(userData.data.address.state)
+       {
+         address.state = userData.data.address.state;
+       }
+        if(userData.data.address.zip)
+       {
+         address.zip = userData.data.address.zip;
+       }
+    }
+      self.setState({imageURL: userData.data.imageURL, headline: userData.data.headline, country: address.country, city: address.city, state: address.state, zip: address.zip});
+    });
+  },
   handleHeadlineChange: function(e) {
     this.setState({ headline: e.target.value });
   },
@@ -27,6 +63,7 @@ var IntroForm = React.createClass( {
   },
   handleSubmit: function(e) {
     e.preventDefault();
+    $("#myModal").modal("hide");
     let imageURL = this.state.imageURL.trim();
     let headline = this.state.headline.trim();
     let country = this.state.country.trim();
@@ -41,7 +78,7 @@ var IntroForm = React.createClass( {
     }
     this.props.onIntroSubmit({  imageURL: imageURL, headline: headline, country: country, 
                     state: state, city: city, zip: zip  });
-    this.setState({ imageURL: '', headline: '', country: '', city: '', state: '', zip: ''  });
+    // this.setState({ imageURL: '', headline: '', country: '', city: '', state: '', zip: ''  });
   },
   render: function() {
     return (

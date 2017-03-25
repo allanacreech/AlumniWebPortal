@@ -56,7 +56,10 @@ db.on("error", function(err) {
 var routes = require("./server/controllers");
 app.use("/api", routes);
 
-// -------------------------------------------------
+// Undefined Routes
+app.get('*',function (req, res) {
+        res.redirect('/');
+    });
 
 // Listener
 app.listen(PORT, function() {

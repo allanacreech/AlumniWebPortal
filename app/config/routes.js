@@ -27,7 +27,7 @@ var AlumniHome = require( "../components/child/alumniHome");
 var Profile = require("../components/child/profile");
 var Calendar = require("../components/child/calendar");
 var Store = require("../components/store/store");
-var Search = require("../components/child/search");
+var AlumniSearch = require("../components/child/alumniSearch");
 
 // Export the Routes
 module.exports = (
@@ -42,7 +42,7 @@ module.exports = (
       <Route path="profile" component={Profile} />
       <Route path="calendar" component={Calendar} />
       <Route path="store" component={Store} />
-      <Route path="search" component={Search} />
+      <Route path="search" component={AlumniSearch} />
 
       {/* Default page after login is AlumniHome */}
       <IndexRoute component={AlumniHome} />

@@ -30,6 +30,7 @@ var ExperienceForm = React.createClass( {
   },
   handleSubmit: function(e) {
     e.preventDefault();
+    $("#workModal").modal("hide");
     let jobTitle = this.state.jobTitle.trim();
     let company = this.state.company.trim();
     let jobLocation = this.state.jobLocation.trim();

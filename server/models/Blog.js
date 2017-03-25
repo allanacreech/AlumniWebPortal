@@ -8,13 +8,17 @@ var BlogSchema = new Schema({
         required: true,
         default: Date.now()
     },
-    email:{
-        type: String,
+    authorId:{
+        type: Schema.Types.ObjectId,
         required: true
     },
     author: {
         type: String,
         required: true
+    },
+    category:{
+        type: String,
+        required: false
     },
     body: {
         type: String,
