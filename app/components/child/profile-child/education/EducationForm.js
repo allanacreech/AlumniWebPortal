@@ -26,6 +26,7 @@ var EducationForm = React.createClass( {
 
   handleSubmit: function(e) {
     e.preventDefault();
+    $("#educationModal").modal("hide");
     let schoolName = this.state.schoolName.trim();
     let degree = this.state.degree.trim();
     let fieldOfStudy = this.state.fieldOfStudy.trim();

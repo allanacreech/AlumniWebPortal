@@ -44,7 +44,7 @@ var AlumniHome = React.createClass({
 
     },
   handleBlogSubmit: function(blogBody) {
-    var blog = { date: Date.now(), email: this.state.userData.email, author: this.state.userData.firstName + ' ' + this.state.userData.lastName, body: blogBody.body};
+    var blog = { date: Date.now(), authorId: this.state.userData._id, author: this.state.userData.firstName + ' ' + this.state.userData.lastName, body: blogBody.body};
     this.addBlog(blog);
   },
     addBlog: function(blog){
