@@ -91,6 +91,14 @@ var ExperienceForm = React.createClass( {
                                         <option>February</option>
                                         <option>March</option>
                                         <option>April</option>
+                                        <option>May</option>
+                                        <option>June</option>
+                                        <option>July</option>
+                                        <option>August</option>
+                                        <option>September</option>
+                                        <option>October</option>
+                                        <option>November</option>
+                                        <option>December</option>
                                       </select>
                                       {/* #startYear */}
                                       <label htmlFor="startYear">Year</label>
@@ -112,12 +120,20 @@ var ExperienceForm = React.createClass( {
                                         <option>February</option>
                                         <option>March</option>
                                         <option>April</option>
+                                        <option>May</option>
+                                        <option>June</option>
+                                        <option>July</option>
+                                        <option>August</option>
+                                        <option>September</option>
+                                        <option>October</option>
+                                        <option>November</option>
+                                        <option>December</option>
                                       </select>
                                       {/* #endYear */}
                                       <label htmlFor="endYear">Year</label>
                                       <select className="form-control" id="endYear" value= {this.state.endYear} onChange= {this.handleEndYearChange}>
-                                         <option>-</option>
-                                       <option>1990</option>
+                                        <option>-</option>
+                                        <option>1990</option>
                                         <option>1991</option>
                                         <option>1992</option>
                                         <option>1993</option>
