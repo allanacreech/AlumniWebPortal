@@ -70,7 +70,9 @@ var Profile = React.createClass({
           {/* :: Intro container */}
 
           {/* PLACE PROFILE INTRO INFO HERE! */}
-          <div className="jumbotron" style={{paddingRight: 30, paddingLeft: 30}}>
+          <div className="panel panel-default">
+          <div className="panel-body">
+          {/*<div className="jumbotron" style={{paddingRight: 30, paddingLeft: 30}}>*/}
             
             <div className="introData">
               <IntroItem userData={this.state.userData}/>
@@ -81,7 +83,8 @@ var Profile = React.createClass({
             {/* ::Edit Intro:: Modal */}
 
             <IntroForm onIntroSubmit = {this.handleIntroSubmit} />
-          </div> {/* /.jumbotron */} 
+          </div> {/* /.panel-default */} 
+         </div> {/* /.panel-body */} 
         </div> {/* /.container */}
 
 
@@ -139,9 +142,12 @@ var Profile = React.createClass({
           </div> {/* /.panel-default */}
         </div> {/* /.container */}
 
+
+
       </div>
     );
   }
 });
- 
+
+    
 module.exports = Profile;
