@@ -1,17 +1,15 @@
-
 .btn-default {
     color: #555;
     background-color: rgba(0,0,0,.0001);
     border-color: rgba(0,0,0,.075);
-
 } 
-.jumbotron{
+/*.jumbotron{
   padding-right: 30px;
   padding-left: 30px;
   border-radius: 25px;
   background-color: #fff;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-}
+}*/
 .profilePic{
   margin-top: 10px;
   height: 150px;
@@ -20,18 +18,12 @@
   border-width:5px;
   box-shadow: -1px 2px 14px 1px rgba(0, 0, 0, 0.55); 
 }
-
 h2{
   text-align: center;
 }
 h3{
   margin-left: 15px;
 }
-.btn-default{
-    color: #555;
-    background-color: rgba(0,0,0,.0001);
-    border-color: rgba(0,0,0,.075);
-} 
 .intro-list-group{
   text-align: center;
   padding: 0;
@@ -70,12 +62,6 @@ h3{
   line-height: 1.428571429;
   border-radius: 15px;
 }
-#editIntroBtn{
-    position: absolute;
-    left: 91%;
-    bottom: 34%;
-}
-
 #editIntroBtn, #addExperienceBtn, #addEducationBtn, #addOrganizationBtn{
   float: right;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
@@ -98,11 +84,10 @@ h3{
 {
   margin-top: 8px;
 }
-
 #dataForm {
   width: 100%;
 }
-#addDegree {
+/*#addDegree {
   font-size: 12px;
   float: right;
   margin-right: 0;
@@ -113,8 +98,7 @@ h3{
   height: 16px;
   padding: 0px;
   border: 0px;
-}
-
+}*/
 .entry:not(:first-of-type){
   margin-top: 8px;
 }
@@ -124,4 +108,3 @@ h3{
 .dataStyle{
   color: red;
 }
-
