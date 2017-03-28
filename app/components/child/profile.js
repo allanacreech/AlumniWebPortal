@@ -62,15 +62,17 @@ var Profile = React.createClass({
 
   render: function() {
 
-    return (
+     return (
 
-    
+      <div>
         <div className="container">
 
-          {/* intro.js :: intro container */}
+          {/* :: Intro container */}
 
           {/* PLACE PROFILE INTRO INFO HERE! */}
-          <div className="jumbotron" style={{paddingRight: 30, paddingLeft: 30}}>
+          <div className="panel panel-default">
+          <div className="panel-body">
+          {/*<div className="jumbotron" style={{paddingRight: 30, paddingLeft: 30}}>*/}
             
             <div className="introData">
               <IntroItem userData={this.state.userData}/>
@@ -81,13 +83,14 @@ var Profile = React.createClass({
             {/* ::Edit Intro:: Modal */}
 
             <IntroForm onIntroSubmit = {this.handleIntroSubmit} />
-          </div> {/* /.jumbotron */} 
-        
+          </div> {/* /.panel-default */} 
+         </div> {/* /.panel-body */} 
+        </div> {/* /.container */}
 
 
-        {/* experience.js :: Experience container */} 
+        {/* :: Experience container */} 
 
-        <div className="row">
+        <div className="container">
           <div className="panel panel-default">
             <div className="panel-body">
               <h4 className="panel-title">Experience</h4>
@@ -110,12 +113,12 @@ var Profile = React.createClass({
               </div> {/* /.card */} 
             </div> {/* /.panel-body */}
           </div> {/* /.panel-default */}
-        </div> {/* /.row */} 
+        </div> {/* /.container */} 
 
 
-        {/* edication.js ::Education container */} 
+        {/* :: Education container */} 
 
-        <div className="row">
+        <div className="container">
           <div className="panel panel-default">
             <div className="panel-body">
               <h4 className="panel-title">Education</h4>
@@ -137,10 +140,11 @@ var Profile = React.createClass({
               </div> {/* /.card */} 
             </div> {/* /.panel-body */}
           </div> {/* /.panel-default */}
-        </div> {/* /.row*/}
+        </div> {/* /.container */}
 
-{/* /close container*/}
-</div>
+
+
+      </div>
     );
   }
 });

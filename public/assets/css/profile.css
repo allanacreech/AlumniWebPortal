@@ -1,17 +1,8 @@
-
 .btn-default {
     color: #555;
     background-color: rgba(0,0,0,.0001);
     border-color: rgba(0,0,0,.075);
-
 } 
-.jumbotron{
-  padding-right: 30px;
-  padding-left: 30px;
-  border-radius: 25px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-}
 .profilePic{
   margin-top: 10px;
   height: 150px;
@@ -20,29 +11,20 @@
   border-width:5px;
   box-shadow: -1px 2px 14px 1px rgba(0, 0, 0, 0.55); 
 }
-
 h2{
   text-align: center;
 }
 h3{
   margin-left: 15px;
 }
-.btn-default{
-    color: #555;
-    background-color: rgba(0,0,0,.0001);
-    border-color: rgba(0,0,0,.075);
-} 
+h4{
+  letter-spacing: 0.01em;
+  font-weight: lighter;
+  padding-top: 2px;
+}
 .intro-list-group{
   text-align: center;
   padding: 0;
-}
-.profilePic{
-  margin-top: 10px;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  border-width:5px;
-  box-shadow: -1px 2px 14px 1px rgba(0, 0, 0, 0.55); 
 }
 .myModal{
     display: block !important;
@@ -53,6 +35,19 @@ h3{
 .modal-body{
   height: 400px;
   overflow-y: auto;
+}
+#saveBtn{
+  background-color: #50525c;
+  border-color: #50525c;
+  float: right;
+  padding: 10px;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+#closeBtn{
+  float: right;
+  padding: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 #country, #city, #jobTitle, #jobLocation, #fieldOfStudy{
   width: 100%;
@@ -70,12 +65,6 @@ h3{
   line-height: 1.428571429;
   border-radius: 15px;
 }
-#editIntroBtn{
-    position: absolute;
-    left: 91%;
-    bottom: 34%;
-}
-
 #editIntroBtn, #addExperienceBtn, #addEducationBtn, #addOrganizationBtn{
   float: right;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
@@ -98,30 +87,103 @@ h3{
 {
   margin-top: 8px;
 }
-
 #dataForm {
   width: 100%;
 }
-#addDegree {
-  font-size: 12px;
-  float: right;
-  margin-right: 0;
-  margin-left: 0;
+/* Intro Items */ 
+#iClassOf{
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    line-height: inherit;
 }
-#addDegreeBtn{
-  width:15px;
-  height: 16px;
-  padding: 0px;
-  border: 0px;
+#iLocation{
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-weight: lighter;
+    line-height: inherit;
+    color: #8c8994;
+    padding-top: 5px;
+    
 }
-
-.entry:not(:first-of-type){
-  margin-top: 8px;
+#iHeadline{
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    font-weight: lighter;
+    line-height: inherit;
+    color: #8c8994;
+    padding-top: 5px;
 }
-#dataForm {
-  width: 100%;
+/* Experience Items */ 
+#jTitle{
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+    line-height: inherit;
 }
-.dataStyle{
-  color: red;
+#jCompany{
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    font-weight: lighter;
+    line-height: inherit;
+    color: #8c8994;
+    
 }
-
+#jLocation{
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-weight: lighter;
+    line-height: inherit;
+    color: #8c8994;
+}
+#jDate{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: inherit;
+    color: #8c8994;
+}
+#jDescription{
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: inherit;
+    color: #8c8994;
+    padding-top: 3px;
+}
+/* Education Items */ 
+#eSchoolName{
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    line-height: inherit;
+}
+#eDegree{
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+    line-height: inherit;
+    color: #8c8994;
+}
+#eFieldOfStudy{
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-weight: lighter;
+    line-height: inherit;
+    color: #8c8994;
+    
+}
+#eSchoolActivities{
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    font-weight: lighter;
+    line-height: inherit;
+    color: #8c8994;
+   
+}
+#eSchoolYears{
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    line-height: inherit;
+    color: #8c8994;
+   
+}
