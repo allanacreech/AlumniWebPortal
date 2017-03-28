@@ -171,19 +171,21 @@ var IntroForm = React.createClass( {
                         {/* #city */}
                         <label htmlFor="zip" className="form-control-label">Zip</label>
                         <input type="text" className="form-control" id="zip" value= {this.state.zip} onChange= {this.handleZipChange}/>                        
-                       </div>
-                        <input role="button" type="submit" className="btn btn-default" value="Save" />
-                      </div>                       
+                        </div>
+                        {/* modal-body */} 
+                        </div>
+                        {/* Modal-Footer */} 
+                        <div className="modal-footer">
+                       </div> {/* /.form-group */} 
+                      <button type="button" className="btn btn-default" id="closeBtn" data-dismiss="modal">Close</button>
+                     <input role="button" className="btn btn-primary" id="saveBtn" type = "submit" value = "Save" />
                     </form>
-                  </div>
-
-                  {/* Modal-Footer */} 
-                  <div className="modal-footer">
-                    <button type="button" className="btn btn-default" data-dismiss="modal">Done</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                   {/*<button type="button" className="btn btn-default" id="closeBtn" data-dismiss="modal">Close</button>*/}
+                 </div> {/* /.modal-footer */} 
+               </div> {/* /.modal-content */} 
+              </div> {/* /.modal-dialog */} 
+            {/* /.modal-fade */}
+          </div>  
     );
   }
 });
