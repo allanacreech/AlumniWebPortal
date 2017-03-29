@@ -68,7 +68,7 @@ var AlumniHome = React.createClass({
     return (
 
 
-<div className="container-fluid">
+<div className="container">
   <div className="row" id="mainRow">
 
     <div>
