@@ -1,54 +1,17 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/*Alumni Web Solutions Fonts*/
+/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Josefin Sans', sans-serif;*/
 
-*,
-*:after,
-*:before {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-
-/* General Demo Style */
-body {
-	font-family: 'Lato', 'Myriad Pro','Trebuchet MS', sans-serif;
-	background: #f9f9f9 url(../images/bg.jpg) repeat top left;
-	font-weight: 300;
-	font-size: 14px;
-	color: #333;
-	overflow: scroll;
-	overflow-x: hidden;
-}
-
-a {
-	color: #555;
-	text-decoration: none;
-}
-
-a img {
-	border: none;
-}
-
-.container {
-	position: relative;
-	background: transparent url(../images/light.png) fixed no-repeat center top;
-}
-
+/*Background*/
 body  {
-    /*color:#fff;*/
     text-align:center;
-    /*background-image: url('../images/graduates1.jpg');*/
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
-    /*font-size: 12px;
-    font-family: 'Dancing Script', cursive;*/
     -webkit-animation: backgroundScroll 15s linear 1;
     -webkit-animation-fill-mode: forwards;
     animation: backgroundScroll 15s linear 1;
     animation-fill-mode: forwards;
-	/*opacity: .5;*/
 }
 
 @-webkit-keyframes backgroundScroll {
@@ -62,81 +25,83 @@ to {background-position: 0px -180px;}
 
 }
 
-
 /*Center Box*/
 .center-block {
 	background-color: #fff;
 	border-radius: 8px;
-	height: 550px;
-	margin-left: -400px;
-	margin-top: -266px;
-	width: 800px;
-	left: 50%;
-	top: 50%;
-	position: absolute;
+	width: 40%;
+	margin: 160px auto;
 	box-shadow: 10px 10px 30px 5px #595959;
 	z-index: 1;
 }
-	/*Main Image*/
-	.focalImage {
-		display: inline-block;
-		height: 100%;
-		width: 100%;
-		vertical-align: top;
-		overflow: hidden;
-		border-radius: 8px 8px 0px 0px;
-	}
 
-	/*Login Section*/
-	.formRow{
-		margin-top: 30px;
-		margin-left: 10px;
-	}
-	
-	.cityStateUniversityLogo {
-		margin-left: -30px;
-	}
-
-	.alumniWebPortalLine {
-		font-size: 14px;
-		margin-left: -30px;
-	}
-
-	.academicWebSolutionsLine {
-		font-size: 12px;
-		margin-top: -8px;
-		margin-left: -30px;
-	}
-
-	.formRow .col-md-4{
-		float: left;
-	}
-
-	.container-fluid{
-		padding: 0px !important;
-	}
-
-	.col-lg-8 {
-		margin-left: -20px;
-	}
-
-	.loginForm p{
-		float: right;
-    	margin-right: 210px;
-	}
-
-input[type=text] {
-    padding: 10px;
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    /*background-image: url('searchicon.png');*/
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+/*Main Image*/
+.focalImage {
+	display: inline-block;
+	height: 95%;
+	width: 100%;
+	vertical-align: top;
+	overflow: hidden;
+	border-radius: 8px 8px 0px 0px;
 }
+
+/*Logos and text to left of login form*/
+.alumniPortalLogo img {
+	margin-top: 15px;
+	width: 100%;
+	max-width: 220px;
+}
+
+.poweredByLine {
+	font-size: 14px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-style: italic;
+	font-weight: lighter;
+	margin-top: 10px;
+}
+
+.academicWebSolutionsLogo img {
+	margin-top: -15px;
+	width: 100%;
+	max-width: 140px;
+}
+
+/*positioning for email and password input fields*/
+.formFields{
+	margin-top: 25px;
+	width: 100%;
+	max-width: 508px;
+}
+
+/*Adds space below email and password fields to fill the space vertically */
+.form-control {
+	margin-bottom: 25px;
+}
+
+/*highlight color for when email and password fields are selected*/
+.form-control:focus {
+	border-color: #383aa3;
+	box-shadow: inset 0 1px 1px #383aa3, 0 0 8px #383aa3;
+}
+
+/*Color for Login Button*/
+.btn {
+	background-color: #383aa3;
+	color: #fff;
+}
+
+/*Keeps Login text white upon hover*/
+.btn:hover {
+	color: #fff
+}
+
+/*highlight color of Login Button*/
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline-color: #383aa3;
+}
+
+/*color of "here" link (link to signup page)*/
+a {
+	color: #383aa3;
+}
+
