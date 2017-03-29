@@ -21,6 +21,35 @@ body {
 	z-index: 1;
 }
 
+.btn-primary {
+	background-color: #383aa3;
+	color: #fff;
+}
+
+.btn-primary:hover {
+	background-color: #383aa3;
+	color: #fff
+}
+
+.btn-primary:active:focus {
+	background-color: #383aa3;
+}
+
+/*highlight color of Submit Button*/
+.btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus {
+    outline-color: #383aa3;
+}
+
+/*highlight color of Clear Button*/
+.btn-default:focus, .btn-default:active:focus, .btn-default.active:focus {
+    outline-color: #383aa3;
+}
+
+.form-control:focus {
+	border-color: #383aa3;
+	box-shadow: inset 0 1px 1px #383aa3, 0 0 8px #383aa3;
+}
+
 .right-buttons {
 	float: right;
 	margin-left: 10px;

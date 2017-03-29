@@ -129,22 +129,22 @@ var EducationForm = React.createClass( {
                 <option>1992</option>
                 <option>1993</option>
                 </select>
-            </div> {/* /.col-4 col-sm-9  */} 
+             </div> {/* /.col-4 col-sm-9  */} 
             </div> {/* /.row */} 
-        </div> {/* /.col-sm-9 */} 
-        </div> {/* /. row */} 
-      </div> {/* /. form-group */}  
-              <input role="button" className="btn btn-default" type = "submit" value = "Save" />
-      </form>
- </div> {/* /.modal-body */} 
-    <div className="modal-footer"> {/* Modal-Footer */} 
-<button type="button" className="btn btn-default" data-dismiss="modal">Done</button>
-</div>
-</div> {/* /. modal-content */} 
-</div> {/* /.modal-dialog */} 
-{/* /.modal-fade */}    
-</div> 
-      
+          </div> {/* /.col-sm-9 */} 
+        </div> {/* /. row */}                          
+      </div> {/* modal-body */} 
+    {/* Modal-Footer */} 
+      <div className="modal-footer">
+          </div> {/* /.form-group */} 
+             <button type="button" className="btn btn-default" id="closeBtn" data-dismiss="modal">Close</button>
+                  <input role="button" className="btn btn-primary" id="saveBtn" type = "submit" value = "Save" />
+                    </form>
+                  </div> {/* /.modal-footer */} 
+               </div> {/* /.modal-content */} 
+             </div> {/* /.modal-dialog */} 
+          {/* /.modal-fade */}
+      </div> 
     )
   }
 });

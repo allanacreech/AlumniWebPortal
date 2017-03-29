@@ -91,6 +91,14 @@ var ExperienceForm = React.createClass( {
                                         <option>February</option>
                                         <option>March</option>
                                         <option>April</option>
+                                        <option>May</option>
+                                        <option>June</option>
+                                        <option>July</option>
+                                        <option>August</option>
+                                        <option>September</option>
+                                        <option>October</option>
+                                        <option>November</option>
+                                        <option>December</option>
                                       </select>
                                       {/* #startYear */}
                                       <label htmlFor="startYear">Year</label>
@@ -112,12 +120,20 @@ var ExperienceForm = React.createClass( {
                                         <option>February</option>
                                         <option>March</option>
                                         <option>April</option>
+                                        <option>May</option>
+                                        <option>June</option>
+                                        <option>July</option>
+                                        <option>August</option>
+                                        <option>September</option>
+                                        <option>October</option>
+                                        <option>November</option>
+                                        <option>December</option>
                                       </select>
                                       {/* #endYear */}
                                       <label htmlFor="endYear">Year</label>
                                       <select className="form-control" id="endYear" value= {this.state.endYear} onChange= {this.handleEndYearChange}>
-                                         <option>-</option>
-                                       <option>1990</option>
+                                        <option>-</option>
+                                        <option>1990</option>
                                         <option>1991</option>
                                         <option>1992</option>
                                         <option>1993</option>
@@ -127,20 +143,21 @@ var ExperienceForm = React.createClass( {
                                 </div>
                               </div>
                               {/* #description */} 
-                              <label htmlFor="#jobDescription" className="form-control-label">Description</label>
-                              <textarea className="form-control" id="#jobDescription" value= {this.state.jobDescription} onChange= {this.handleJobDescriptionChange} />
-                            </div> {/* /.form-group */} 
-                            <input role="button" className="btn btn-default" type = "submit" value = "Save" />
-                          </form>
-                        </div> {/* modal-body */} 
-                        {/* Modal-Footer */} 
+                            <label htmlFor="#jobDescription" className="form-control-label">Description</label>
+                           <textarea className="form-control" id="#jobDescription" value= {this.state.jobDescription} onChange= {this.handleJobDescriptionChange} />
+                          </div> {/* modal-body */} 
+                         {/* Modal-Footer */} 
                         <div className="modal-footer">
-                          <button type="button" className="btn btn-default" data-dismiss="modal">Done</button>
-                        </div> {/* /.modal-footer */} 
-                      </div> {/* /.modal-content */} 
-                    </div> {/* /.modal-dialog */} 
-                  {/* /.modal-fade */}
-                  </div>  
+                       </div> {/* /.form-group */} 
+                       <button type="button" className="btn btn-default" id="closeBtn" data-dismiss="modal">Close</button>
+                      <input role="button" className="btn btn-primary" id="saveBtn" type = "submit" value = "Save" />
+                    </form>
+                   {/*<button type="button" className="btn btn-default" id="closeBtn" data-dismiss="modal">Close</button>*/}
+                  </div> {/* /.modal-footer */} 
+                </div> {/* /.modal-content */} 
+                </div> {/* /.modal-dialog */} 
+              {/* /.modal-fade */}
+              </div>  
                 )
         }
 });
