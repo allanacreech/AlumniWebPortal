@@ -211,3 +211,56 @@ textarea {
 .BlogForm {
     width: 100%;
 }
+
+.dropdown-content {
+    width: 195px;
+}
+
+.col-sm-4 {
+    margin: 30px 10px 10px 10px;
+}
+
+.dropbtn {
+    background-color: #383aa3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown Icon Menu Styles */ 
+#homeIcon, #profileIcon, #searchIcon, #logOutIcon{
+    padding: 20px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #000;
+	margin-left: 10px;
+	margin-right: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #7a7bb8;
+}
