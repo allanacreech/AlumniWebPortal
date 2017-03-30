@@ -4,8 +4,6 @@ var EducationList = require("./profile-child/education/EducationList");
 var EducationForm = require("./profile-child/education/EducationForm");
 var ExperienceList = require("./profile-child/experience/ExperienceList");
 var ExperienceForm = require("./profile-child/experience/ExperienceForm");
-// var OrganizationList = require("./profile-child/organization/OrganizationList");
-// var OrganizationForm = require("./profile-child/organization/OrganizationForm");
 var IntroForm = require("./profile-child/intro/IntroForm");
 var IntroItem = require("./profile-child/intro/IntroItem");
 var AlumniWebPortalData = require( '../shared/AlumniDataRouter');
@@ -37,6 +35,17 @@ var Profile = React.createClass({
       var self = this;
       console.log(introData);
       AlumniWebPortalData.updateIntroData(this.state.userData._id, introData).then(data => {
+          console.log(data.data);
+            self.getUserInfo();
+        });
+    },
+
+  handleImageSubmit: function(imageObject) {
+     var self = this;
+      // console.log(imageObject.fileName);
+      // console.log(imageObject.data);
+      console.log(imageObject);
+      AlumniWebPortalData.updateImageData(this.state.userData._id, imageObject).then(data => {
           console.log(data.data);
             self.getUserInfo();
         });
@@ -75,7 +84,7 @@ var Profile = React.createClass({
           {/*<div className="jumbotron" style={{paddingRight: 30, paddingLeft: 30}}>*/}
             
             <div className="introData">
-              <IntroItem userData={this.state.userData}/>
+              <IntroItem userData={this.state.userData} onImageSubmit = {this.handleImageSubmit}/>
             </div>
             {/* Trigger the modal with a button */}
             <button type="button" id="editIntroBtn" className="btn btn-default btn-circle " data-toggle="modal" data-target="#myModal"><i className="fa fa-pencil" aria-hidden="true" /></button>

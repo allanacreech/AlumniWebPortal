@@ -1,10 +1,21 @@
 var Blog = require("../models/Blog");
 var express = require("express");
+var passport = require("../config/passport");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 var router = express.Router();
 
 function listBlogs(req, res){
     Blog.list().then(function(data){
+        console.log(data);
+        res.json(data);
+    });
+}
+
+function filterBlogsByCategory(req, res){
+    console.log(req.query);
+//    var categories = ["Business", "Clients"];
+    Blog.filterBlogsByCategory(req.query.categories).then(function(data){
         console.log(data);
         res.json(data);
     });
@@ -23,8 +34,8 @@ function createBlog(req, res){
     });
 }
 
-router.route("/").get(listBlogs);
-router.route("/create").post(createBlog);
-// router.route("/:count").get(listLimitedSales);
+router.route("/").get(isAuthenticated, listBlogs);
+router.route("/create").post(isAuthenticated, createBlog);
+router.route("/filterBlogsByCategory").get(isAuthenticated, filterBlogsByCategory);
 
 module.exports = router;

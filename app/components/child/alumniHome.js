@@ -43,8 +43,9 @@ var AlumniHome = React.createClass({
     componentDidUpdate: function(prevProps, prevState){
 
     },
-  handleBlogSubmit: function(blogBody) {
-    var blog = { date: Date.now(), authorId: this.state.userData._id, author: this.state.userData.firstName + ' ' + this.state.userData.lastName, body: blogBody.body};
+  handleBlogSubmit: function(blogObj) {
+    var blog = { date: Date.now(), authorId: this.state.userData._id, author: this.state.userData.firstName + ' ' + this.state.userData.lastName, body: blogObj.body, category: blogObj.category};
+    console.log(blog);
     this.addBlog(blog);
   },
     addBlog: function(blog){
@@ -54,12 +55,28 @@ var AlumniHome = React.createClass({
             self.getBlogInfo();
         });
     },
-    
+    handleCategorySubmit: function(e){
+      e.preventDefault();
+      var categories = [];
+      var checkBoxes = document.getElementsByName("category[]");
+      for(var i = 0; i < checkBoxes.length; i++)
+      {
+        console.log(checkBoxes[i].value);
+        if(checkBoxes[i].checked)
+          categories.push(checkBoxes[i].value);
+      }
+      var self = this;
+      AlumniWebPortalData.filterBlogsByCategory(categories).then(data => {
+          console.log(data.data);
+          if(data.data && data.data.length != 0)
+              self.setState({blogs: data.data});
+            else
+              self.getBlogInfo();
+        });
+    },
     openNav: function(){
      this.setState({myMainStyle: {marginLeft: "250px"}, mySideNavStyle: {width:"250px"}});
-    },
-
- 
+    }, 
     closeNav: function(){
      this.setState({myMainStyle: {marginLeft: "0px"}, mySideNavStyle: {width:"0px"}});
     },
@@ -67,53 +84,45 @@ var AlumniHome = React.createClass({
   render: function() {
     return (
 
-
 <div className="container">
   <div className="row" id="mainRow">
-
-    <div>
-      <i className="fa fa-bars fa-5x"  onClick={this.openNav}></i> 
+    
         <div id="mySidenav" className="sidenav" style={this.state.mySideNavStyle}>
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>×</a>
-          <a href="#">Business</a>
-          <a href="#">Career</a>
-          <a href="#">Celebrity Gossip</a>
-          <a href="#">DIY</a>
-          <a href="#">Economics</a>
-          <a href="#">Education</a>
-          <a href="#">Entertainment</a>
-          <a href="#">Fashion</a>
-          <a href="#">Finance</a>
-          <a href="#">Food</a>
-          <a href="#">Gaming</a>
-          <a href="#">History</a>
-          <a href="#">Lifestyle</a>
-          <a href="#">Marketing</a>
-          <a href="#">Medical</a>
-          <a href="#">Soical Media</a>
-          <a href="#">Nature</a>
-          <a href="#">Parenting</a>
-          <a href="#">Pet</a>
-          <a href="#">Political</a>
-          <a href="#">Real Estate</a>
-          <a href="#">Shopping</a>
-          <a href="#">Shopping</a>
-          <a href="#">Sports</a>
-          <a href="#">Technology</a>
-          <a href="#">Travel</a>
-          <a href="#">Wedding</a>
+          <div>
+            <form encType="multipart/form-data" method = "POST" onSubmit={ this.handleCategorySubmit }>
+            <div >
+              <input type="checkbox" name = "category[]" value="Business" />Business
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Services" />Services
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Clients" />Clients
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Contact" />Contact
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Other" />Other
+            </div>
+              <hr />
+            <input role="button" className="btn btn-default" type = 'submit' value = 'Filter' />
+            <input role="button" className="btn btn-default" type = 'reset' value = 'Clear' onChange={this.getBlogInfo}/>
+                </form>          
+          </div>
       </div>
 {/* Use any element to open the sidenav */}
-    
-         
-      </div> 
+    <i className="fa fa-bars fa-5x"  onClick={this.openNav}></i> 
+ </div>        
+
 {/* Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page */}
         
         <div id="main" style={this.state.myMainStyle}>
 
         
 {/*Profile Area*/}
-            <div className="col span_4_of_8">
+            <div className="col span_2_of_8">
               <div className="well profile-well">
                   <div className="text-center">
                     <img src="/assets/images/gridImages/17.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
@@ -141,33 +150,12 @@ var AlumniHome = React.createClass({
                 <BlogList blogs={this.state.blogs} />
               </div>
             </div>
-{/*End Blog Area*/}
-
-{/*Blog Search Area*/}
-            {/*<div className="col span_2_of_8">
-                <div className="well blogSearch-well">
-                    <h4>Blog Search</h4>
-                      <div className="input-group">
-                        <input type="text" className="form-control" />
-                          <span className="input-group-btn">
-                            <button className="btn btn-default" type="button">
-                          <span className="glyphicon glyphicon-search" />
-                            </button>
-                          </span>
-                      </div>
-                </div>
-              </div>*/}
-{/*End Blog Search Area*/}
-        
+{/*End Blog Area*/}        
         
         </div>
       </div>
-{/*End of the Sidebar menu*/}
 
 
-  
-  {/*end of container*/}
-</div>
     );
   }
 });

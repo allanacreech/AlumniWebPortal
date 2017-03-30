@@ -1,6 +1,13 @@
 var React = require("react");
+var ImageForm = require ("./ImageForm");
+var axios = require("axios");
+// var AlumniWebPortalData = require( '../../shared/AlumniDataRouter');
 
 var IntroItem = React.createClass({
+    getInitialState: function(){
+    return {imageData: {}
+            };
+     }, 
     render: function() {
         return (
         <div className="row">
@@ -8,6 +15,12 @@ var IntroItem = React.createClass({
                 {/* Profile Picture */}
                 <div className="text-center">
                     <img src="/assets/images/cityStateUniversityLogo.jpg" className="profilePic"/>
+                <br />
+                {/* Trigger the modal with a button */}
+                    <button type="button" id="editImageBtn" className="btn btn-default btn-circle " data-toggle="modal" data-target="#imageModal"><i className="fa fa-pencil" aria-hidden="true" /></button>
+                
+                    {/* ::Edit Intro:: Modal */}
+                    <ImageForm onImageSubmit = {this.props.onImageSubmit} userID = {this.props.userData._id}/>
                 </div>
                 <h2 style={{textAlign: 'center'}}>{this.props.userData.firstName + " " + this.props.userData.lastName}</h2>
                 <ul className="intro-list-group"style = {{listStyle: "none"}}>

@@ -2,38 +2,43 @@ var React = require('react');
 
 var BlogForm = React.createClass( {
   getInitialState: function(){
-    return { body: '' };
-    // this.handleAuthorChange = this.handleAuthorChange.bind(this);
-    // this.handleBodyChange = this.handleBodyChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    return { body: '', category: "" };
   },
-  // handleAuthorChange: function(e) {
-  //   this.setState({ author: e.target.value });
-  // },
   handleBodyChange: function(e) {
     this.setState({ body: e.target.value });
+  },
+  handleCategoryChange: function(e) {
+    this.setState({ category: e.target.value });
   },
   handleSubmit: function(e) {
     e.preventDefault();
     //let author = this.state.author.trim();
     let body = this.state.body.trim();
+    let category = this.state.category.trim();
         console.log( body);
-    if (!body) {
+    if (!body && !category) {
+      alert("Please choose a category and enter a message.");
       return;
     }
     console.log("Here");
-    this.props.onBlogSubmit({ body: body });
-    this.setState({ body: '' });
+    this.props.onBlogSubmit({ body: body, category: category });
+    this.setState({ body: '', category: '' });
+  },
+  clearForm: function(){
+    this.setState({ body: '', category: '' });
   },
   render: function() {
     return (
-      <form onSubmit={ this.handleSubmit }>
-        {/*<input
-          type='text'
-          placeholder='Your name...'
-           value={ this.state.author }
-          onChange={ this.handleAuthorChange } />
-          <br />*/}
+      <form method = "POST" onSubmit={ this.handleSubmit }>
+        <label htmlFor="category">Category</label>
+        <select className="form-control" id="category" value= {this.state.category} onChange= {this.handleCategoryChange}>
+        <option></option>
+          <option>Business</option>
+          <option>Services</option>
+          <option>Clients</option>
+          <option>Contact</option>
+          <option>Other</option>
+        </select>
         <input
           type='text'
           placeholder='Say something...'
@@ -41,6 +46,7 @@ var BlogForm = React.createClass( {
           onChange={ this.handleBodyChange } />
           <hr />
         <input role="button" className="btn btn-default" type = 'submit' value = 'Post' />
+        <input role="button" className="btn btn-default" onClick={this.clearForm} value = 'Clear' />
       </form>
     )
   }
