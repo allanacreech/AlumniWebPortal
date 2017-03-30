@@ -34,9 +34,32 @@ var BlogForm = React.createClass( {
         <select className="form-control" id="category" value= {this.state.category} onChange= {this.handleCategoryChange}>
         <option></option>
           <option>Business</option>
-          <option>Services</option>
-          <option>Clients</option>
-          <option>Contact</option>
+          <option>Career</option>
+          <option>Celebrity Gossip</option>
+          <option>DIY</option>
+          <option>Economics</option>
+          <option>Education</option>
+          <option>Entertainment</option>
+          <option>Fashion</option>
+          <option>Finance</option>
+          <option>Food</option>
+          <option>Gaming</option>
+          <option>History</option>
+          <option>Lifestyle</option>
+          <option>Marketing</option>
+          <option>Medical</option>
+          <option>Social Media</option>
+          <option>Money</option>
+          <option>Nature</option>
+          <option>Parenting</option>
+          <option>Pet</option>
+          <option>Political</option>
+          <option>Real Estate</option>
+          <option>Shopping</option>
+          <option>Sports</option>
+          <option>Technology</option>
+          <option>Travel</option>
+          <option>Wedding</option>
           <option>Other</option>
         </select>
         <input

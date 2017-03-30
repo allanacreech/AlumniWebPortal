@@ -95,13 +95,82 @@ var AlumniHome = React.createClass({
               <input type="checkbox" name = "category[]" value="Business" />Business
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Services" />Services
+              <input type="checkbox" name = "category[]" value="Career" />Career
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Clients" />Clients
+              <input type="checkbox" name = "category[]" value="CelebrityGossip" />Celebrity Gossip
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Contact" />Contact
+              <input type="checkbox" name = "category[]" value="DIY" />DIY
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Economics" />Economics
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Education" />Education
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Entertainment" />Entertainment
+            </div>      
+            <div >
+              <input type="checkbox" name = "category[]" value="Fashion" />Fashion
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Finance" />Finance
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Food" />Food
+            </div>            
+             <div >
+              <input type="checkbox" name = "category[]" value="Gaming" />Gaming
+            </div>           
+            <div >
+              <input type="checkbox" name = "category[]" value="History" />History
+            </div>            
+            <div >
+              <input type="checkbox" name = "category[]" value="Lifestyle" />Lifestyle
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Marketing" />Marketing
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Medical" />Medical
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="SocialMedia" />Social Media
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Money" />Money
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Nature" />Nature
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Parenting" />Parenting
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Pet" />Pet
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Political" />Political
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="RealEstate" />Real Estate
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Shopping" />Shopping
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Sports" />Sports
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Technology" />Technology
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Travel" />Travel
+            </div>
+            <div >
+              <input type="checkbox" name = "category[]" value="Wedding" />Wedding
             </div>
             <div >
               <input type="checkbox" name = "category[]" value="Other" />Other
