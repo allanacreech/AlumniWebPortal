@@ -202,7 +202,7 @@ var AlumniHome = React.createClass({
 {/* Pulling userData - classOf + headLine info */}
                     <ul className="intro-list-group"style = {{listStyle: "none"}}>
                     <li>Class of {this.state.userData.classOf}</li>
-                    <li>{('"' + this.state.userData.headline + '"')}</li>
+                    <li>{((this.state.userData.headline&&this.state.userData.headline!='')?('"' + this.state.userData.headline + '"'): '')}</li>
                     </ul>
           
               </div>

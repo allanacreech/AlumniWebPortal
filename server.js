@@ -41,6 +41,10 @@ mongoose.Promise = Promise;
 mongoose.connect("mongodb://localhost/AlumniWebPortalDB");
 var db = mongoose.connection;
 
+db.once("open", function() {
+    console.log("Mongoose connection successful.");
+});
+
 db.on("error", function(err) {
     console.log("Mongoose Error: ", err);
 });
