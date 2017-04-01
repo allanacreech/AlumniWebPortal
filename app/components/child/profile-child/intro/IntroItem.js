@@ -24,10 +24,10 @@ var IntroItem = React.createClass({
                 </div>
                 <h2 style={{textAlign: 'center'}}>{this.props.userData.firstName + " " + this.props.userData.lastName}</h2>
                 <ul className="intro-list-group"style = {{listStyle: "none"}}>
-                   <li id="iClassOf">Class of {this.props.userData.classOf?this.props.userData.classOf:"(not specified)"}</li>
-                   <li id="iLocation">{(this.props.userData.address?this.props.userData.address.city + ', ':"") 
-                       + (this.props.userData.address?this.props.userData.address.state:"")}</li>
-                   <li id="iHeadline">{(this.props.userData.headline?'"' + this.props.userData.headline + '"':"")}</li>    
+                    <li className="list-group-item">Class of {this.props.userData.classOf?this.props.userData.classOf:<span>not specified</span>}</li>
+                    <li className="list-group-item">{((this.props.userData.address&&this.props.userData.address.city)?(this.props.userData.address.city + ', '):'')
+                      + ((this.props.userData.address&&this.props.userData.address.state)?this.props.userData.address.state:'')}</li>
+                    <li className="list-group-item">{((this.props.userData.headline&&this.props.userData.headline!='')?('"' + this.props.userData.headline + '"'): '')}</li>
                 </ul>
             <hr/>
           </div>
