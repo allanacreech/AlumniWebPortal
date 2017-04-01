@@ -90,12 +90,6 @@ var EducationForm = React.createClass( {
           <option>Ed.D. (Doctor of Education) </option>
           <option>J.D. (Juris Doctor) </option>
         </select>
-        {/* #additionalDegree */} 
-        <div className="row" id="addDegree">
-        <button type="button" id="addDegreeBtn" className="btn btn-default btn-circle btn-add">
-            <i className="fa fa-plus" aria-hidden="true" /></button>Add more
-        </div>
-        <br />
         {/* #fieldOfStudy */}
         <label htmlFor="fieldOfStudy" className="form-control-label">Field of study</label>
         <input type="text" className="form-control" id="fieldOfStudy" value= {this.state.fieldOfStudy} onChange= {this.handleFieldOfStudyChange} />  
