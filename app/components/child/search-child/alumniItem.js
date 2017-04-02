@@ -11,7 +11,7 @@ var AlumniItem = React.createClass({
 
                         {/*Look into making this into an accordian, so they have to click to see all of the info, vs only seeing basic info (i.e. name)*/}
                 <ul className="list-group" style = {{listStyle: "none"}}>
-                   <li>Name: {this.props.userInfo.firstName + " " + this.props.userInfo.lastName}</li>
+                   <li>Name: {this.props.userInfo.lastName + ", " + this.props.userInfo.firstName }</li>
                    {/*<li>Degree: {this.props.userInfo.degree}</li>*/}
                    <li>Class of: {this.props.userInfo.classOf}</li>
                 </ul>

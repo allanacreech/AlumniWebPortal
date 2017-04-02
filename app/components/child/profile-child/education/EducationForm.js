@@ -1,9 +1,21 @@
 "use strict";
 var React = require('react');
+var YearList = require('../YearList');
 
 var EducationForm = React.createClass( {
   getInitialState: function(){
-    return { schoolName: '', degree: '' , fieldOfStudy: '' , activities: '' , fromYear: '' , toYear: '' };
+    return { schoolName: '', degree: '' , fieldOfStudy: '' , activities: '' , fromYear: '' , toYear: '', years: [] };
+  },
+  componentDidMount: function(){
+    let d = new Date();
+    let years = [];
+    for(let i = d.getFullYear(); i >= 1950; i--)
+    {
+      years.push(i);
+    }
+    console.log("in component did mount");
+    console.log(years);
+    this.setState({years: years});
   },
   handleSchoolNameChange: function(e) {
     this.setState({ schoolName: e.target.value });
@@ -17,16 +29,15 @@ var EducationForm = React.createClass( {
   handleActivitiesChange: function(e) {
     this.setState({ activities: e.target.value });
   },
-  handleFromYearChange: function(e) {
-    this.setState({ fromYear: e.target.value });
+  handleFromYearChange: function(yearObj) {
+    this.setState({ fromYear: yearObj.year });
   },
-  handleToYearChange: function(e) {
-    this.setState({ toYear: e.target.value });
+  handleToYearChange: function(yearObj) {
+    this.setState({ toYear: yearObj.year });
   },
 
   handleSubmit: function(e) {
     e.preventDefault();
-    $("#educationModal").modal("hide");
     let schoolName = this.state.schoolName.trim();
     let degree = this.state.degree.trim();
     let fieldOfStudy = this.state.fieldOfStudy.trim();
@@ -38,6 +49,16 @@ var EducationForm = React.createClass( {
         alert("Enter a school name, a degree, and a field of study please");
       return;
     }
+   if(!fromYear && toYear){
+      alert("Can't have an end year without a start year.")
+      return;
+    }
+    if(toYear != "Present" && fromYear > toYear)
+    {
+      alert("Start year has to be less than or equal to end year");
+      return;
+    }
+    $("#educationModal").modal("hide");
     console.log("Here");
     this.props.onEducationSubmit({ schoolName: schoolName, degree: degree, fieldOfStudy: fieldOfStudy, 
                   activities: activities , fromYear: fromYear , toYear: toYear });
@@ -66,7 +87,7 @@ var EducationForm = React.createClass( {
         {/* #degree */}
         <label htmlFor="degree" className="form-control-label">Degree</label>
         <select className="form-control" id="degree" value= {this.state.degree} onChange= {this.handleDegreeChange} >
-          <option>-</option>
+          <option></option>
           <option>A.A. (Associate of Arts)</option>
           <option>A.S. (Associate of Science) </option>
           <option>A.A.S. (Associate of Applied Science) </option>
@@ -105,24 +126,12 @@ var EducationForm = React.createClass( {
             <div className="col-4 col-sm-6">
                 {/* #fromYear */}
                 <label htmlFor="fromYear">From Year</label>
-                <select className="form-control" id="fromYear" value= {this.state.fromYear} onChange= {this.handleFromYearChange} >
-                <option>-</option>
-                <option>1990</option>
-                <option>1991</option>
-                <option>1992</option>
-                <option>1993</option>
-                </select>
+                <YearList years={this.state.years} id = "fromYear" year={this.state.fromYear} onYearChange={this.handleFromYearChange}/>
             </div>
             {/* #toYear */}
             <div className="col-4 col-sm-6">
                 <label htmlFor="toYear">To Year</label>
-                <select className="form-control" id="toYear" value= {this.state.toYear} onChange= {this.handleToYearChange} >
-                <option>-</option>
-                <option>1990</option>
-                <option>1991</option>
-                <option>1992</option>
-                <option>1993</option>
-                </select>
+                <YearList years={this.state.years} id = "toYear" year={this.state.toYear} onYearChange={this.handleToYearChange}/>
              </div> {/* /.col-4 col-sm-9  */} 
             </div> {/* /.row */} 
           </div> {/* /.col-sm-9 */} 

@@ -264,3 +264,9 @@ textarea {
 .dropdown:hover .dropbtn {
     background-color: #7a7bb8;
 }
+
+#mySidenav {
+    display: inline-block;
+    margin-right: 2px;
+    overflow: auto;
+}

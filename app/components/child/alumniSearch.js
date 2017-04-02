@@ -114,8 +114,9 @@ var AlumniSearch = React.createClass( {
         {/*Search Ressults*/}
         <div className="row">
           <div className="col-lg-12">
-            <div className="well searchResults-well">
+            {/*<div className="well searchResults-well">*/}
                 <h1>Search Results</h1>
+            <div className="well blog-well">
                   <AlumniList userData={this.state.userData}/>
             </div>
           </div>

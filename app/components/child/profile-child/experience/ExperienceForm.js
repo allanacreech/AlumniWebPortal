@@ -1,8 +1,21 @@
 var React = require('react');
+var YearList = require('../YearList');
 
 var ExperienceForm = React.createClass( {
   getInitialState: function(){
-    return { jobTitle: '', company: '' , jobLocation: '' , startMonth: '' , startYear: '' , endMonth: '' , endYear: '' , currentJob: '', jobDescription: '' };
+    return { jobTitle: '', company: '' , jobLocation: '' , startMonth: '' , startYear: '' , endMonth: '' , endYear: '' , currentJob: '', jobDescription: '',
+              years: [] };
+  },
+  componentDidMount: function(){
+    let d = new Date();
+    let years = [];
+    for(let i = d.getFullYear(); i >= 1950; i--)
+    {
+      years.push(i);
+    }
+    console.log("in component did mount");
+    console.log(years);
+    this.setState({years: years});
   },
   handleJobTitleChange: function(e) {
     this.setState({ jobTitle: e.target.value });
@@ -16,21 +29,21 @@ var ExperienceForm = React.createClass( {
   handleStartMonthChange: function(e) {
     this.setState({ startMonth: e.target.value });
   },
-  handleStartYearChange: function(e) {
-    this.setState({ startYear: e.target.value });
+  handleStartYearChange: function(yearObj) {
+    this.setState({ startYear: yearObj.year });
   },
   handleEndMonthChange: function(e) {
     this.setState({ endMonth: e.target.value });
   },
-  handleEndYearChange: function(e) {
-    this.setState({ endYear: e.target.value });
+  handleEndYearChange: function(yearObj) {
+    this.setState({ endYear: yearObj.year });
   },
   handleJobDescriptionChange: function(e) {
     this.setState({ jobDescription: e.target.value });
   },
   handleSubmit: function(e) {
     e.preventDefault();
-    $("#workModal").modal("hide");
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let jobTitle = this.state.jobTitle.trim();
     let company = this.state.company.trim();
     let jobLocation = this.state.jobLocation.trim();
@@ -45,6 +58,21 @@ var ExperienceForm = React.createClass( {
         alert("Enter a job title and a company please");
       return;
     }
+    if(!startYear && endYear){
+      alert("Can't have an end year without a start year.")
+      return;
+    }
+    if(endYear != "Present" && startYear > endYear)
+    {
+      alert("Start year has to be less than or equal to end year");
+      return;
+    }
+    if (startYear == endYear && months.indexOf(startMonth) > months.indexOf(endMonth))
+    {
+      alert("If years are the same, then start month has to be less than or equal to end month");
+      return;      
+    }
+    $("#workModal").modal("hide");
     console.log("Here");
     this.props.onExperienceSubmit({ jobTitle: jobTitle , company: company , jobLocation: jobLocation , startMonth: startMonth , startYear: startYear ,
          endMonth: endMonth , endYear: endYear , currentJob: currentJob , jobDescription: jobDescription });
@@ -86,7 +114,7 @@ var ExperienceForm = React.createClass( {
                                       {/* #startMonth */}
                                       <label htmlFor="startMonth">Month</label>
                                       <select className="form-control" id="startMonth" value= {this.state.startMonth} onChange= {this.handleStartMonthChange}>
-                                        <option>-</option>
+                                        <option></option>
                                         <option>January</option>
                                         <option>February</option>
                                         <option>March</option>
@@ -102,20 +130,14 @@ var ExperienceForm = React.createClass( {
                                       </select>
                                       {/* #startYear */}
                                       <label htmlFor="startYear">Year</label>
-                                      <select className="form-control" id="startYear" value= {this.state.startYear} onChange= {this.handleStartYearChange}>
-                                        <option>-</option>
-                                        <option>1990</option>
-                                        <option>1991</option>
-                                        <option>1992</option>
-                                        <option>1993</option>
-                                      </select>
+                                        <YearList years={this.state.years} id = "startYear" year={this.state.startYear} onYearChange={this.handleStartYearChange}/>
                                     </div>
                                     <div className="col-4 col-sm-6">
                                       <h5>To</h5>
                                       {/* #endMonth */}
                                       <label htmlFor="endMonth">Month</label>
                                       <select className="form-control" id="endMonth" value= {this.state.endMonth} onChange= {this.handleEndMonthChange}>
-                                        <option>-</option>
+                                        <option></option>
                                         <option>January</option>
                                         <option>February</option>
                                         <option>March</option>
@@ -131,13 +153,7 @@ var ExperienceForm = React.createClass( {
                                       </select>
                                       {/* #endYear */}
                                       <label htmlFor="endYear">Year</label>
-                                      <select className="form-control" id="endYear" value= {this.state.endYear} onChange= {this.handleEndYearChange}>
-                                        <option>-</option>
-                                        <option>1990</option>
-                                        <option>1991</option>
-                                        <option>1992</option>
-                                        <option>1993</option>
-                                      </select>
+                                        <YearList years={this.state.years} id = "endYear" year={this.state.endYear} onYearChange={this.handleEndYearChange}/>
                                     </div>
                                   </div>
                                 </div>

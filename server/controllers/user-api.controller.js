@@ -44,9 +44,42 @@ function getUserInfo(req, res)
 
 function updateIntroInfo(req, res)
 {
-    var introData = {imageURL: req.body.imageURL, headline: req.body.headline, address: {country: req.body.country, 
-        city: req.body.city, state: req.body.state, zip: req.body.zip}};
-        console.log(introData);
+    var introData = {};
+    if(req.body.imageURL)
+    {
+        introData.imageURL = req.body.imageURL;
+    }
+
+    if(req.body.headline)
+    {
+        introData.headline = req.body.headline;
+    }
+    
+    if(req.body.country || req.body.city || req.body.state || req.body.zip)
+    {
+        introData.address = {};
+        if(req.body.country)
+        {
+            introData.address.country = req.body.country;
+        }
+        
+        if(req.body.city)
+        {
+            introData.address.city = req.body.city;
+        }
+        
+        if(req.body.state)
+        {
+            introData.address.state = req.body.state;
+        }
+        
+        if(req.body.zip)
+        {
+            introData.address.zip = req.body.zip;
+        }
+    }
+    console.log("inside update intro info");
+    console.log(introData);
     User.update({_id: req.params.id}, introData,{}).then(data => {
         console.log(data);
         res.json(data);
@@ -97,12 +130,12 @@ function findAlumni(req, res){
     console.log("finding alumni");
     console.log(req.query);
     var query = {};
-    if(req.query.firstName) query.firstName = req.query.firstName;
-    if(req.query.lastName) query.lastName = req.query.lastName;
-    if(req.query.degree) query.firstName = req.query.degree;
-    if(req.query.classOf) query.firstName = req.query.classOf;
+    if(req.query.firstName) query.firstName = new RegExp(req.query.firstName, "i");  //JavaScript RegExp
+    if(req.query.lastName) query.lastName = new RegExp(req.query.lastName, "i");
+//    if(req.query.degree) query.degree = req.query.degree;
+    if(req.query.classOf) query.classOf = req.query.classOf;
 
-    User.find(query).then(function(data){
+    User.find(query).sort({lastName: 1, firstName: 1}).exec(function(err, data){
         console.log(data);
         res.json(data);
     });

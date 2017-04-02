@@ -89,95 +89,95 @@ var AlumniHome = React.createClass({
     
         <div id="mySidenav" className="sidenav" style={this.state.mySideNavStyle}>
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>×</a>
-          <div>
+          <div id="filterBlock">
             <form encType="multipart/form-data" method = "POST" onSubmit={ this.handleCategorySubmit }>
-            <div >
-              <input type="checkbox" name = "category[]" value="Business" />Business
+            <input role="button" className="btn btn-default" type = 'submit' value = 'Filter' style= {{color: 'white'}}/>
+            <input role="button" className="btn btn-default" type = 'reset' value = 'Clear'  style= {{color: 'white'}} onChange={this.getBlogInfo}/>
+            <hr />
+            <div>
+              <input type="checkbox" name = "category[]" value="Business" /> Business
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Career" />Career
+              <input type="checkbox" name = "category[]" value="Career" /> Career
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="CelebrityGossip" />Celebrity Gossip
+              <input type="checkbox" name = "category[]" value="CelebrityGossip" /> Celebrity Gossip
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="DIY" />DIY
+              <input type="checkbox" name = "category[]" value="DIY" /> DIY
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Economics" />Economics
+              <input type="checkbox" name = "category[]" value="Economics" /> Economics
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Education" />Education
+              <input type="checkbox" name = "category[]" value="Education" /> Education
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Entertainment" />Entertainment
+              <input type="checkbox" name = "category[]" value="Entertainment" /> Entertainment
             </div>      
             <div >
-              <input type="checkbox" name = "category[]" value="Fashion" />Fashion
+              <input type="checkbox" name = "category[]" value="Fashion" /> Fashion
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Finance" />Finance
+              <input type="checkbox" name = "category[]" value="Finance" /> Finance
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Food" />Food
+              <input type="checkbox" name = "category[]" value="Food" /> Food
             </div>            
              <div >
-              <input type="checkbox" name = "category[]" value="Gaming" />Gaming
+              <input type="checkbox" name = "category[]" value="Gaming" /> Gaming
             </div>           
             <div >
-              <input type="checkbox" name = "category[]" value="History" />History
+              <input type="checkbox" name = "category[]" value="History" /> History
             </div>            
             <div >
-              <input type="checkbox" name = "category[]" value="Lifestyle" />Lifestyle
+              <input type="checkbox" name = "category[]" value="Lifestyle" /> Lifestyle
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Marketing" />Marketing
+              <input type="checkbox" name = "category[]" value="Marketing" /> Marketing
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Medical" />Medical
+              <input type="checkbox" name = "category[]" value="Medical" /> Medical
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="SocialMedia" />Social Media
+              <input type="checkbox" name = "category[]" value="SocialMedia" /> Social Media
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Money" />Money
+              <input type="checkbox" name = "category[]" value="Money" /> Money
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Nature" />Nature
+              <input type="checkbox" name = "category[]" value="Nature" /> Nature
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Parenting" />Parenting
+              <input type="checkbox" name = "category[]" value="Parenting" /> Parenting
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Pet" />Pet
+              <input type="checkbox" name = "category[]" value="Pet" /> Pet
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Political" />Political
+              <input type="checkbox" name = "category[]" value="Political" /> Political
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="RealEstate" />Real Estate
+              <input type="checkbox" name = "category[]" value="RealEstate" /> Real Estate
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Shopping" />Shopping
+              <input type="checkbox" name = "category[]" value="Shopping" /> Shopping
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Sports" />Sports
+              <input type="checkbox" name = "category[]" value="Sports" /> Sports
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Technology" />Technology
+              <input type="checkbox" name = "category[]" value="Technology" /> Technology
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Travel" />Travel
+              <input type="checkbox" name = "category[]" value="Travel" /> Travel
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Wedding" />Wedding
+              <input type="checkbox" name = "category[]" value="Wedding" /> Wedding
             </div>
             <div >
-              <input type="checkbox" name = "category[]" value="Other" />Other
+              <input type="checkbox" name = "category[]" value="Other" /> Other
             </div>
-              <hr />
-            <input role="button" className="btn btn-default" type = 'submit' value = 'Filter' />
-            <input role="button" className="btn btn-default" type = 'reset' value = 'Clear' onChange={this.getBlogInfo}/>
                 </form>          
           </div>
       </div>

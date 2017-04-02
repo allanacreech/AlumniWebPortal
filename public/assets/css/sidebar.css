@@ -8,8 +8,16 @@
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    overflow-y: auto; /* Added by Shari/David */
+    padding-top: 20px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav #filterBlock {
+    color: white;
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-bottom: 70px;
 }
 
 /* The navigation menu links */
