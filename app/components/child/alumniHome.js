@@ -92,7 +92,7 @@ var AlumniHome = React.createClass({
           <div id="filterBlock">
             <form encType="multipart/form-data" method = "POST" onSubmit={ this.handleCategorySubmit }>
             <input role="button" className="btn btn-default" type = 'submit' value = 'Filter' style= {{color: 'white'}}/>
-            <input role="button" className="btn btn-default" type = 'reset' value = 'Clear'  style= {{color: 'white'}} onChange={this.getBlogInfo}/>
+            <input role="button" className="btn btn-default" type = 'reset' value = 'Clear'  style= {{color: 'white'}} onClick={this.getBlogInfo}/>
             <hr />
             <div>
               <input type="checkbox" name = "category[]" value="Business" /> Business
@@ -201,7 +201,7 @@ var AlumniHome = React.createClass({
 
 {/* Pulling userData - classOf + headLine info */}
                     <ul className="intro-list-group"style = {{listStyle: "none"}}>
-                    <li>Class of {this.state.userData.classOf}</li>
+                    <li>Class of {this.state.userData.classOf?this.state.userData.classOf:' ... '}</li>
                     <li>{((this.state.userData.headline&&this.state.userData.headline!='')?('"' + this.state.userData.headline + '"'): '')}</li>
                     </ul>
           
