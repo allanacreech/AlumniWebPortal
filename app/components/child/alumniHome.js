@@ -66,13 +66,13 @@ var AlumniHome = React.createClass({
           categories.push(checkBoxes[i].value);
       }
       var self = this;
-      AlumniWebPortalData.filterBlogsByCategory(categories).then(data => {
-          console.log(data.data);
-          if(data.data && data.data.length != 0)
-              self.setState({blogs: data.data});
-            else
-              self.getBlogInfo();
-        });
+        AlumniWebPortalData.filterBlogsByCategory(categories).then(data => {
+        console.log(data.data);
+        if(data.data && data.data.length != 0)
+             self.setState({blogs: data.data});
+        else
+             self.setState({blogs: []}); /*DGB change at 1:19 pm 4/2/2017 */
+       });
     },
     openNav: function(){
      this.setState({myMainStyle: {marginLeft: "250px"}, mySideNavStyle: {width:"250px"}});
