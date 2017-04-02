@@ -182,7 +182,7 @@ var AlumniHome = React.createClass({
           </div>
       </div>
 {/* Use any element to open the sidenav */}
-    <i className="fa fa-bars fa-5x"  onClick={this.openNav}></i> 
+    <i className="fa fa-bars fa-3x"  onClick={this.openNav}></i> 
  </div>        
 
 {/* Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page */}
@@ -210,9 +210,9 @@ var AlumniHome = React.createClass({
 {/*End Profile Area*/}
 
 {/*Blog Area*/}
-            <div className="col span_4_of_8">
+            <div className="col span_6_of_8">
               <div className="well blog-well">
-                <h1 className="page-header">Blog Goes Here</h1>
+                <h1 className="page-header">Share an article or update</h1>
               <div>
                 <BlogForm onBlogSubmit={ this.handleBlogSubmit } />
               </div>

@@ -4,9 +4,9 @@
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 60px;
+    top: 63px;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: #111; /*#111; Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: auto; /* Added by Shari/David */
     padding-top: 20px; /* Place content 60px from the top */
@@ -27,7 +27,7 @@
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */

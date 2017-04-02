@@ -103,8 +103,8 @@ var AlumniSearch = React.createClass( {
                       <option>J.D. (Juris Doctor) </option>
                     </select>*/}
                   
-                    <input role="button" className="btn btn-default" type = "submit" value = "Search" />
-                    <button type="button" className="btn btn-default" onClick={this.clearForm}>Clear</button>
+                    <button type="button" className="btn btn-default" id="clearBtn" onClick={this.clearForm}>Clear</button>
+                    <input role="button" className="btn btn-primary" id="searchBtn" type = "submit" value = "Search" />
 
                   </form>
               </div>
