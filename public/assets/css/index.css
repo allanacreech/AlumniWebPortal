@@ -29,20 +29,26 @@ to {background-position: 0px -180px;}
 .center-block {
 	background-color: #fff;
 	border-radius: 8px;
-	width: 50%;
+	width: 40%;
 	margin: 160px auto;
 	box-shadow: 10px 10px 30px 5px #595959;
 	z-index: 1;
 }
 
 /*Main Image*/
-.focalImage {
-	display: inline-block;
-	height: 95%;
+.focalImage img {
+	/*display: inline-block;*/
+	/*height: 100%;*/
 	width: 100%;
 	vertical-align: top;
 	overflow: hidden;
 	border-radius: 8px 8px 0px 0px;
+}
+
+.col-md-4 {
+	max-width: 250px;
+	width: 100%;
+	margin-left: 20px;
 }
 
 /*Logos and text to left of login form*/
@@ -70,7 +76,7 @@ to {background-position: 0px -180px;}
 .formFields{
 	margin-top: 25px;
 	width: 100%;
-	max-width: 470px;
+	max-width: 480px;
 }
 
 /*Adds space below email and password fields to fill the space vertically */
@@ -105,3 +111,133 @@ a {
 	color: #383aa3;
 }
 
+
+/*980 Screen Size*/
+	@media screen and (max-width: 980px) {
+		.center-block {
+			width: 100%;
+			max-width: 680px;
+			margin: 100px 0px 0px 150px;
+			
+		}
+	
+		.alumniPortalLogo img {
+			margin-top: 35px;
+			width: 100%;
+			max-width: 160px;
+		}
+
+		.poweredByLine {
+			font-size: 14px;
+			font-family: 'Josefin Sans', sans-serif;
+			font-style: italic;
+			font-weight: lighter;
+			margin-top: 10px;
+		}
+
+		.academicWebSolutionsLogo img {
+			margin-top: -15px;
+			width: 100%;
+			max-width: 100px;
+		}
+
+		.col-md-4 {
+			max-width: 200px;
+			width: 100%;
+			margin-left: 0;
+		}
+
+		.formFields{
+			margin: -160px 0px 0px 190px;
+			width: 100%;
+			max-width: 480px;
+			display: inline-block;
+		}
+}
+
+
+/*768 Screen Size*/
+@media screen and (max-width: 768px) {
+		.center-block {
+			width: 100%;
+			max-width: 540px;
+			margin: 20px 0px 0px 120px;
+		}
+
+		.alumniPortalLogo img {
+			margin-top: 35px;
+			width: 100%;
+			max-width: 500px;
+		}
+
+		.poweredByLine {
+			font-size: 14px;
+			font-family: 'Josefin Sans', sans-serif;
+			font-style: italic;
+			font-weight: lighter;
+			margin-top: 10px;
+		}
+
+		.academicWebSolutionsLogo img {
+			margin-top: -15px;
+			width: 100%;
+			max-width: 150px;
+		}
+
+		.col-md-4 {
+			max-width: 300px;
+			width: 100%;
+			margin-left: 120px;
+		}
+
+		.formFields{
+			margin: 30px 0px 0px -5px;
+			width: 100%;
+			max-width: 530px;
+			display: inline-block;
+		}
+}
+
+
+/*640 Screen Size*/
+@media screen and (max-width: 640px) {
+
+		.center-block {
+			width: 100%;
+			max-width: 440px;
+			margin: 30px 0px 0px 90px;
+		}
+
+		.alumniPortalLogo img {
+			margin-top: 35px;
+			width: 100%;
+			max-width: 460px;
+		}
+
+		.poweredByLine {
+			font-size: 14px;
+			font-family: 'Josefin Sans', sans-serif;
+			font-style: italic;
+			font-weight: lighter;
+			margin-top: 10px;
+		}
+
+		.academicWebSolutionsLogo img {
+			margin-top: -15px;
+			width: 100%;
+			max-width: 150px;
+		}
+
+		.col-md-4 {
+			max-width: 275px;
+			width: 100%;
+			margin-left: 85px;
+		}
+
+		.formFields{
+			margin: 30px 0px 0px -5px;
+			width: 100%;
+			max-width: 430px;
+			display: inline-block;
+		}
+}
