@@ -1,3 +1,20 @@
+.search-well{
+    height: 500px;
+}
 .searchResults-well {
     margin-top: 40px;
 }
+#searchBtn {
+    color: #ffffff;
+    background-color: #50525c;
+    border-color: #50525c;
+    padding: 10px;
+    float: right;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}   
+#clearBtn {
+    float: right;  
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+} 

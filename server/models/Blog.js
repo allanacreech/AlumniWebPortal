@@ -38,8 +38,15 @@ BlogSchema.statics = {
             .sort({date: -1})
             .exec();
     },
+    filterBlogsByCategory(categories){
+        console.log(categories);
+        return this.where('category').in(categories)
+            .limit(50)
+            .sort({date: -1})
+            .exec();
+    },
     getByAuthor(author){
-        return this.find({author: author})
+        return this.find({author: author});
     },
     getByDate(date){
         return this.find({date: date})

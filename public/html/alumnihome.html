@@ -28,54 +28,6 @@
 
 	<!--react links-->
 
-	<!--link-->
-<style>
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Dropdown Icon Menu Styles */ 
-#homeIcon, #profileIcon, #searchIcon, #logOutIcon{
-    padding: 20px;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: #000;
-	margin-left: 10px;
-	margin-right: 10px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-</style>
-	<!--link-->
 
 </head>
 
@@ -83,7 +35,7 @@
 	<div class="container-fluid">
 		<div style="background:#555 !important" class="jumbotron">
 			<div class="row">
-				<img src="/assets/images/cityStateUniversityLogo.png" alt="Logo" width="50" height="50">
+				<!--<img src="/assets/images/cityStateUniversityLogo.png" alt="Logo" width="50" height="50">-->
 
 					<!-- Dropdown Icon Menu // Added "dropdown-menu-right" + rows + col-sm-4 to break icons -->
 					
@@ -92,18 +44,18 @@
   						<div class="dropdown-content dropdown-menu-right">
 						  <div class="row">
 							  	<div class="col-sm-4">						
-    								<a href="#/alumniHome"><i class="fa fa-home" id="homeIcon"></i></a>
-							  		</div>
+    								<a href="#/alumniHome" class="pageIcons"><img src="/assets/images/AlumniHomeIcon.png" alt="Logo"></a>
+							  	</div>
 								<div class="col-sm-4">	
-    								<a href="#/profile"><i class="fa fa-pencil" id="profileIcon"></i></a>
-						  			</div>
+    								<a href="#/profile" class="pageIcons"><img src="/assets/images/EditProfileIcon.png" alt="Logo"></a>
+						  		</div>
 						 		</div>
 							<div class="row">
 								<div class="col-sm-4">
-									<a href="#/search"><i class="fa fa-search" id="searchIcon"></i></a>
-									</div>
+									<a href="#/search" class="pageIcons"><img src="/assets/images/SearchUsersIcon.png" alt="Logo"></a>
+								</div>
 								<div class="col-sm-4">	
-									<a href="/api/login/logout"><i class="fa fa-sign-out" id="logOutIcon"></i></a>
+									<a href="/api/login/logout" class="pageIcons"><img src="/assets/images/LogoutIcon.png" alt="Logo"></a>
 						  		</div>
 						  	</div>
   						</div>

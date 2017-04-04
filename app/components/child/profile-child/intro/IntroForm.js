@@ -72,10 +72,10 @@ var IntroForm = React.createClass( {
     let zip = this.state.zip.trim();
  
     console.log(this.state);
-    if(!state || !city)
-    {
-        return;
-    }
+    // if(!state || !city)
+    // {
+    //     return;
+    // }
     this.props.onIntroSubmit({  imageURL: imageURL, headline: headline, country: country, 
                     state: state, city: city, zip: zip  });
     // this.setState({ imageURL: '', headline: '', country: '', city: '', state: '', zip: ''  });
@@ -115,7 +115,7 @@ var IntroForm = React.createClass( {
                         {/* #state */}
                         <label htmlFor="state">State</label>
                         <select className="form-control" id="state" value= {this.state.state} onChange= {this.handleStateChange}>
-                          <option>-</option>
+                          <option></option>
                           <option>AL</option>
                           <option>AK</option>
                           <option>AZ</option>

@@ -115,7 +115,9 @@
                 <div class="form-group">
                     <label for="inputClassOf" class="control-label">Graduating Class Of</label>
                     <br />
-                    <input type="text" class="form-control" id="inputClassOf" placeholder="Graduating Class Of" name="classOf"/>
+                    <select class="form-control" id="inputClassOf" name="classOf">
+                        <option></option>
+                    </select>
                 </div>
 
 
@@ -160,11 +162,11 @@
 			maxStep : 2,
 			interval : 2000,
 			w1024 : {
-				rows : 4,
+				rows : 5,
 				columns : 2
 			},
 			w768 : {
-				rows : 4,
+				rows : 5,
 				columns : 2
 			},
 			w480 : {
@@ -176,11 +178,21 @@
 				columns : 2
 			},
 			w240 : {
-				rows : 4,
+				rows : 5,
 				columns : 2
 			},
 		} );
-			
+
+    var selectYearBlock = $("#inputClassOf");
+    let d = new Date();
+    for(let i = d.getFullYear(); i >= 1950; i--)
+    {
+      var option = $("<option></option>");
+      option.html(i);
+      selectYearBlock.append(option);
+    }
+
+
 	});
 </script>
 
