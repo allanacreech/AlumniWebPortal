@@ -10,20 +10,15 @@ body {
 .registration-block {
 	background-color: #fff;
 	border-radius: 8px;
-	height: 525px;
-	/*margin-left: -400px;*/
-	margin-top: 80px;
+	height: 550px;
+	margin-left: -400px;
+	margin-top: -266px;
 	width: 800px;
 	left: 50%;
 	top: 50%;
-	/*position: absolute;*/
+	position: absolute;
 	box-shadow: 10px 10px 30px 5px #595959;
 	z-index: 1;
-}
-
-h1 {
-	font-size: 28px;
-	margin-top: 30px;
 }
 
 .btn-primary {
@@ -97,7 +92,7 @@ h1 {
 }
 
 /*980 Screen Size*/
-	/*@media screen and (max-width: 980px) {
+	@media screen and (max-width: 980px) {
 
 		body {
 			background-image: url('/assets/images/SchoolBuilding.jpg');
@@ -133,11 +128,11 @@ h1 {
 			max-width: 550px;
 			/*display: inline-block;*/
 		}
-}*/
+}
 
 
 /*768 Screen Size*/
-/*@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 		.center-block {
 			width: 100%;
 			max-width: 540px;
@@ -176,11 +171,11 @@ h1 {
 			max-width: 530px;
 			display: inline-block;
 		}
-}*/
+}
 
 
 /*640 Screen Size*/
-/*@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
 
 		.center-block {
 			width: 100%;
@@ -220,4 +215,4 @@ h1 {
 			max-width: 430px;
 			display: inline-block;
 		}
-}*/
+}
