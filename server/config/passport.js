@@ -25,12 +25,12 @@ passport.use('login', new LocalStrategy(
       if (!dbUser) {
           console.log('User Not Found with username '+ email);
           return done(null, false, 
-                req.flash('message', 'User Not found.'));                 
+                {message: 'User Not found.'});                 
       }
       // If there is a user with the given email, but the password the user gives us is incorrect
       if (dbUser.password !== password) {
         console.log("invalid password");
-        return done(null, false, req.flash('message', 'Invalid Password'));
+        return done(null, false, { message: 'Invalid Password'});
       }
       // If none of the above, return the user
       return done(null, dbUser);
@@ -55,7 +55,7 @@ passport.use('signup', new LocalStrategy({
         if (user) {
           console.log('User already exists');
           return done(null, false, 
-             req.flash('message','User Already Exists'));
+             { message: 'User Already Exists'});
         } else {
           // if there is no user with that email
           // create the user
