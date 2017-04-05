@@ -8,7 +8,7 @@ var YearList = React.createClass({
     render: function(){
         return (
         <select className="form-control" id={this.props.id} value= {this.props.year} onChange= {this.handleYearChange}>
-            {(this.props.id=="startYear"||this.props.id=="fromYear")?<option></option>:<option>Present</option>}
+            {(this.props.id=="startYear"||this.props.id=="fromYear")?<option></option>:<option></option>}
             {this.props.years.map((year, index) => {
                 return <option key={this.props.id+index}>{year}</option>;
             })}
@@ -18,3 +18,5 @@ var YearList = React.createClass({
 });
 
 module.exports = YearList;
+
+// {new Date().getFullYear()}

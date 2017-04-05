@@ -194,7 +194,7 @@ var AlumniHome = React.createClass({
             <div className="col span_2_of_8">
               <div className="well profile-well">
                   <div className="text-center">
-                    <img src="/assets/images/gridImages/17.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
+                    <img src="/assets/images/cityStateUniversityLogo.jpg" className="user-image" alt={this.state.userData.firstName + ' ' + this.state.userData.lastName}/>
                     <h4>{this.state.userData.firstName + " " + this.state.userData.lastName}</h4>
                   </div>
                   <hr/>

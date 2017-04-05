@@ -30,6 +30,8 @@ var BlogForm = React.createClass( {
   render: function() {
     return (
       <form method = "POST" onSubmit={ this.handleSubmit }>
+                <input role="button" className="btn btn-primary" id="postBtn" type = 'submit' value = 'Post' />
+        <input role="button" className="btn btn-default" id="clearPostBtn" onClick={this.clearForm} value = 'Clear' />
         <label htmlFor="category">Category</label>
         <select className="form-control" id="category" value= {this.state.category} onChange= {this.handleCategoryChange}>
         <option></option>
@@ -68,8 +70,7 @@ var BlogForm = React.createClass( {
           value={ this.state.body }
           onChange={ this.handleBodyChange } />
           <hr/>
-        <input role="button" className="btn btn-primary" id="postBtn" type = 'submit' value = 'Post' />
-        <input role="button" className="btn btn-default" id="clearPostBtn" onClick={this.clearForm} value = 'Clear' />
+
         
       </form>
     )

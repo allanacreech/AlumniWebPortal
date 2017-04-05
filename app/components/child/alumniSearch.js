@@ -3,10 +3,22 @@ var React = require('react');
 var AlumniWebPortalData = require( '../shared/AlumniDataRouter');
 var axios = require('axios');
 var AlumniList = require("./search-child/AlumniList");
+var YearList = require('./profile-child/YearList');
 
 var AlumniSearch = React.createClass( {
   getInitialState: function(){
-    return { firstName: '', lastName: '' , degree: '' ,  classOf: '', userData: [] };
+    return { firstName: '', lastName: '' , degree: '' ,  classOf: '', userData: [], years: [] };
+  },
+  componentDidMount: function(){
+    let d = new Date();
+    let years = [];
+    for(let i = d.getFullYear(); i >= 1950; i--)
+    {
+      years.push(i);
+    }
+    console.log("in component did mount");
+    console.log(years);
+    this.setState({years: years});
   },
   handleFirstNameChange: function(e) {
     this.setState({ firstName: e.target.value} );
@@ -17,8 +29,8 @@ var AlumniSearch = React.createClass( {
   handleDegreeChange: function(e) {
     this.setState({ degree: e.target.value });
   },
-  handleClassOfChange: function(e) {
-    this.setState({ classOf: e.target.value });
+  handleClassOfChange: function(classOfObj) {
+    this.setState({ classOf: classOfObj.year });
   },
 
   handleSubmit: function(e) {
@@ -28,6 +40,7 @@ var AlumniSearch = React.createClass( {
     searchData.lastName = this.state.lastName.trim();
     searchData.degree = this.state.degree.trim();
     searchData.classOf = this.state.classOf.trim();
+    if(!searchData.firstName && !searchData.lastName && !searchData.classOf) return;
     var self = this;
     AlumniWebPortalData.findAlumni(searchData).then(data => {
       console.log(data.data);
@@ -72,37 +85,11 @@ var AlumniSearch = React.createClass( {
                   <div className="form-group">
                       <label htmlFor="inputClassOf" className="control-label">Graduating Class Of</label>
                       <br />
-                      <input type="text" className="form-control" id="inputClassOf" placeholder="Graduating Class Of" name="classOf" onChange={this.handleClassOfChange} value={this.state.classOf}/>
-                  </div>
-
-                  {/*Degree*/}
-                  {/*<label htmlFor="degree" className="form-control-label">Degree</label>
-                    <select className="form-control" id="degree" value= {this.state.degree} onChange= {this.handleDegreeChange} >
-                      <option></option>
-                      <option>A.A. (Associate of Arts)</option>
-                      <option>A.S. (Associate of Science) </option>
-                      <option>A.A.S. (Associate of Applied Science) </option>
-                      <option>A.E. (Associate of Engineering) </option>
-                      <option>A.A.A. (Associate of Applied Arts) </option>
-                      <option>A.P.S. (Associate of Political Science) </option>
-                      <option>B.A. (Bachelor of Arts) </option>
-                      <option>B.S. (Bachelor of Science) </option>
-                      <option>B.F.A. (Bachelor of Fine Arts) </option>
-                      <option>B.B.A. (Bachelor of Business Administration) </option>
-                      <option>B.Arch. (Bachelor of Architecture) </option>
-                      <option>M.A. (Master of Arts) </option>
-                      <option>M.F.A. (Master of Fine Arts) </option>
-                      <option>M.S. (Master of Science) </option>
-                      <option>M.Res. (Master of Research) </option>
-                      <option>M.Phil. (Master of Philosophy) </option>
-                      <option>LL.M. (Master of Laws) </option>
-                      <option>M.B.A. (Master of Business Administration) </option>
-                      <option>PhD (Doctor of Philosophy) </option>
-                      <option>M.D. (Doctor of Medicine) </option>
-                      <option>Ed.D. (Doctor of Education) </option>
-                      <option>J.D. (Juris Doctor) </option>
-                    </select>*/}
-                  
+                         <YearList years={this.state.years} id = "inputClassOf" year={this.state.classOf} onYearChange={this.handleClassOfChange}
+                            />
+                      {/*<input type="text" className="form-control" id="inputClassOf" placeholder="Graduating Class Of" name="classOf" 
+                        onChange={this.handleClassOfChange} value={this.state.classOf}/>*/}
+                  </div>                  
                     <button type="button" className="btn btn-default" id="clearBtn" onClick={this.clearForm}>Clear</button>
                     <input role="button" className="btn btn-primary" id="searchBtn" type = "submit" value = "Search" />
 

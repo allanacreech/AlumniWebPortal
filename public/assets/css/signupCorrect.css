@@ -1,0 +1,218 @@
+/*background image*/
+body {
+	background-image: url('/assets/images/SchoolBuilding.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*Registration Box*/
+.registration-block {
+	background-color: #fff;
+	border-radius: 8px;
+	height: 550px;
+	margin-left: -400px;
+	margin-top: -266px;
+	width: 800px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	box-shadow: 10px 10px 30px 5px #595959;
+	z-index: 1;
+}
+
+.btn-primary {
+	background-color: #383aa3;
+	color: #fff;
+}
+
+.btn-primary:hover {
+	background-color: #383aa3;
+	color: #fff
+}
+
+.btn-primary:active:focus {
+	background-color: #383aa3;
+}
+
+/*highlight color of Submit Button*/
+.btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus {
+    outline-color: #383aa3;
+}
+
+/*highlight color of Clear Button*/
+.btn-default:focus, .btn-default:active:focus, .btn-default.active:focus {
+    outline-color: #383aa3;
+}
+
+.form-control:focus {
+	border-color: #383aa3;
+	box-shadow: inset 0 1px 1px #383aa3, 0 0 8px #383aa3;
+}
+
+.right-buttons {
+	float: right;
+	margin-left: 10px;
+}
+
+.row {
+	padding-left: 0;
+}
+
+.image-grid-col {
+	margin-left: 0;
+	padding-top: 0;
+	padding-left: 0;
+}
+
+.form-group {
+	padding-right: 15px;
+	padding-left: 20px;
+}
+
+/*For Side Grid Images*/
+.container-fluid {
+    margin-left: -45px;
+	margin-top: -15px;
+}
+
+.ri-grid ul {
+	list-style: none;
+	display: block;
+	width: 100%;
+	margin: 22px;
+	padding: 0;
+	opacity: 1;
+	/*background: rgba(25, 25, 25, .7)*/
+	-webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+}
+
+/*980 Screen Size*/
+	@media screen and (max-width: 980px) {
+
+		body {
+			background-image: url('/assets/images/SchoolBuilding.jpg');
+			background-size: 170%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.center-block {
+			width: 100%;
+			max-width: 680px;
+			margin: 100px 0px 0px 150px;
+			
+		}
+
+		h1 {
+			font-size: 30px;
+			margin-top: -535px;
+		}
+	
+		.col-md-4 {
+			max-width: 215px;
+		}
+
+		.col-md-8 {
+			max-width: 630px;
+			margin-left: 220px;
+		}
+
+		.form-control {
+			margin: 10px 0px 0px 0px;
+			/*width: 100%;*/
+			max-width: 550px;
+			/*display: inline-block;*/
+		}
+}
+
+
+/*768 Screen Size*/
+@media screen and (max-width: 768px) {
+		.center-block {
+			width: 100%;
+			max-width: 540px;
+			margin: 20px 0px 0px 120px;
+		}
+
+		.alumniPortalLogo img {
+			margin-top: 35px;
+			width: 100%;
+			max-width: 500px;
+		}
+
+		.poweredByLine {
+			font-size: 14px;
+			font-family: 'Josefin Sans', sans-serif;
+			font-style: italic;
+			font-weight: lighter;
+			margin-top: 10px;
+		}
+
+		.academicWebSolutionsLogo img {
+			margin-top: -15px;
+			width: 100%;
+			max-width: 150px;
+		}
+
+		.col-md-4 {
+			max-width: 300px;
+			width: 100%;
+			margin-left: 120px;
+		}
+
+		.formFields{
+			margin: 30px 0px 0px -5px;
+			width: 100%;
+			max-width: 530px;
+			display: inline-block;
+		}
+}
+
+
+/*640 Screen Size*/
+@media screen and (max-width: 640px) {
+
+		.center-block {
+			width: 100%;
+			max-width: 440px;
+			margin: 30px 0px 0px 90px;
+		}
+
+		.alumniPortalLogo img {
+			margin-top: 35px;
+			width: 100%;
+			max-width: 460px;
+		}
+
+		.poweredByLine {
+			font-size: 14px;
+			font-family: 'Josefin Sans', sans-serif;
+			font-style: italic;
+			font-weight: lighter;
+			margin-top: 10px;
+		}
+
+		.academicWebSolutionsLogo img {
+			margin-top: -15px;
+			width: 100%;
+			max-width: 150px;
+		}
+
+		.col-md-4 {
+			max-width: 275px;
+			width: 100%;
+			margin-left: 85px;
+		}
+
+		.formFields{
+			margin: 30px 0px 0px -5px;
+			width: 100%;
+			max-width: 430px;
+			display: inline-block;
+		}
+}
