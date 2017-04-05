@@ -40,6 +40,7 @@ var AlumniSearch = React.createClass( {
     searchData.lastName = this.state.lastName.trim();
     searchData.degree = this.state.degree.trim();
     searchData.classOf = this.state.classOf.trim();
+    if(!searchData.firstName && !searchData.lastName && !searchData.classOf) return;
     var self = this;
     AlumniWebPortalData.findAlumni(searchData).then(data => {
       console.log(data.data);
