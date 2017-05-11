@@ -2,7 +2,7 @@
  "name": "alumni-web-portal",
  "version": "1.0.0",
  "engines": {
-     "node": "6.9.1"
+     "node": "6.5.0"
    },
    "main": "index.js",
  "scripts": {
