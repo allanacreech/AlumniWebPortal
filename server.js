@@ -38,7 +38,11 @@ app.use(passport.session());
 // MongoDB Configuration configuration (Change this URL to your own DB)
 Promise = require('bluebird');
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/AlumniWebPortalDB");
+// uncomment this line to test locally
+// mongoose.connect("mongodb://localhost/AlumniWebPortalDB");
+
+// comment this line out if testing locally (and uncommenting the line above)
+mongoose.connect(process.env.MONGODB_URI);
 var db = mongoose.connection;
 
 db.once("open", function() {
